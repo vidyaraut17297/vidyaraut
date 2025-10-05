@@ -6,9 +6,11 @@
         <title>Vidya Raut - Portfolio</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <script src="education-icons.js" defer></script>
-        <script src="contact-icons.js" defer></script>
-        <script>
+    <script src="education-icons.js" defer></script>
+    <script src="contact-icons.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
             document.addEventListener('DOMContentLoaded', function () {
                 // Education icons
                 const eduIcons = window.educationIcons || {};
@@ -59,82 +61,103 @@
             </section>
 
             <!-- About Me Section -->
+            <!-- About Me Section (Card Layout) -->
             <section id="about" aria-labelledby="about-title">
                 <h1 id="about-title">About Me</h1>
-                <div class="about-content">
-                    <blockquote class="intro">I'm an energy & power market analyst with experience turning sector data into concise insights and decision-ready dashboards.</blockquote>
-                    <p>My background spans Physics (BSc/MSc), B.Ed (Science/Maths), and M.Tech in Energy Technology (2025–2027), plus hands-on stints in energy storage (ESS) market research, lab support for battery R&D, and data analysis using Excel/Power BI.</p>
-                    <p>I provide detailed reports that save leaders time and increase clarity for stakeholders who are not technical, such as quarterly or yearly briefs, competitor and policy trackers, and target views.</p>
-                    <p><strong>Focus areas:</strong> Energy storage & power markets, hydrogen fuel, solar PV management, competitive intelligence, policy/tariff tracking, market sizing, and dashboards.</p>
-                    <p><strong>Tools:</strong> Excel (advanced), PowerPoint Presentation.</p>
-                    <p><strong>Looking for:</strong> Market/Energy Analyst roles where I can improve reporting speed/quality and support data-driven strategy.</p>
+                <div class="about-card-grid">
+                    <div class="about-card">
+                        <blockquote class="intro">I'm an energy & power market analyst with experience turning sector data into concise insights and decision-ready dashboards.</blockquote>
+                        <p>My background spans Physics (BSc/MSc), B.Ed (Science/Maths), and M.Tech in Energy Technology (2025–2027), plus hands-on stints in energy storage (ESS) market research, lab support for battery R&D, and data analysis using Excel/Power BI.</p>
+                        <p>I provide detailed reports that save leaders time and increase clarity for stakeholders who are not technical, such as quarterly or yearly briefs, competitor and policy trackers, and target views.</p>
+                        <p><strong>Focus areas:</strong> Energy storage & power markets, hydrogen fuel, solar PV management, competitive intelligence, policy/tariff tracking, market sizing, and dashboards.</p>
+                        <p><strong>Tools:</strong> Excel (advanced), PowerPoint Presentation.</p>
+                        <p><strong>Looking for:</strong> Market/Energy Analyst roles where I can improve reporting speed/quality and support data-driven strategy.</p>
+                    </div>
                 </div>
             </section>
 
             <!-- Skills & Technologies Section -->
+            <!-- Skills & Technologies Section (Card/Table Layout) -->
             <section id="skills" class="alt-bg" aria-labelledby="skills-title">
                 <h1 id="skills-title">Skills & Technologies</h1>
-                <div class="skills-categories">
-                    <div class="skills-category">
+                <div class="skills-card-grid">
+                    <div class="skills-card">
                         <h3>Technical Skills</h3>
-                        <ul class="skills-list">
-                            <li>Microsoft Excel (Advanced)</li>
-                            <li>PowerPoint</li>
-                            <li>Data Analysis</li>
-                            <li>Quantitative Analytics</li>
-                            <li>Battery Management Systems</li>
-                            <li>Energy Audits</li>
-                            <li>Solar System Design</li>
-                        </ul>
+                        <table class="skills-table">
+                            <tr><td>Microsoft Excel (Advanced)</td></tr>
+                            <tr><td>PowerPoint</td></tr>
+                            <tr><td>Data Analysis</td></tr>
+                            <tr><td>Quantitative Analytics</td></tr>
+                            <tr><td>Battery Management Systems</td></tr>
+                            <tr><td>Energy Audits</td></tr>
+                            <tr><td>Solar System Design</td></tr>
+                        </table>
                     </div>
-                    <div class="skills-category">
+                    <div class="skills-card">
                         <h3>Research & Market</h3>
-                        <ul class="skills-list">
-                            <li>Market Research</li>
-                            <li>Project Management</li>
-                            <li>Report Writing</li>
-                            <li>Competitive Intelligence</li>
-                        </ul>
+                        <table class="skills-table">
+                            <tr><td>Market Research</td></tr>
+                            <tr><td>Project Management</td></tr>
+                            <tr><td>Report Writing</td></tr>
+                            <tr><td>Competitive Intelligence</td></tr>
+                        </table>
                     </div>
-                    <div class="skills-category">
+                    <div class="skills-card">
                         <h3>Professional Skills</h3>
-                        <ul class="skills-list">
-                            <li>Critical Thinking</li>
-                            <li>Communication</li>
-                            <li>Teamwork</li>
-                            <li>Problem Solving</li>
-                            <li>Analytical Skills</li>
-                            <li>Presentation Skills</li>
-                        </ul>
+                        <table class="skills-table">
+                            <tr><td>Critical Thinking</td></tr>
+                            <tr><td>Communication</td></tr>
+                            <tr><td>Teamwork</td></tr>
+                            <tr><td>Problem Solving</td></tr>
+                            <tr><td>Analytical Skills</td></tr>
+                            <tr><td>Presentation Skills</td></tr>
+                        </table>
                     </div>
                 </div>
             </section>
 
             <!-- Projects Section -->
+            <!-- Projects Section (Card Layout) -->
             <section id="projects" aria-labelledby="projects-title">
                 <h1 id="projects-title">Projects</h1>
-                <div class="projects-grid">
-                    <div class="project-card">
+                <div class="projects-card-grid">
+                    <div class="projects-card">
                         <h3>Synthesis & Characterization of Fe3O4 Thin Films</h3>
-                        <p>Used Chemical Bath Deposition Method to synthesize and characterize Fe3O4 thin films. <br><span class="project-date">June 2019 - April 2020</span></p>
-                        <div class="project-tags"><span>Physics</span><span>Materials Science</span></div>
+                        <table class="projects-table">
+                            <tr><td>Used Chemical Bath Deposition Method to synthesize and characterize Fe3O4 thin films.</td></tr>
+                            <tr><td><span class="project-date">June 2019 - April 2020</span></td></tr>
+                            <tr><td><span class="project-tags"><span>Physics</span><span>Materials Science</span></span></td></tr>
+                        </table>
                     </div>
-                    <div class="project-card">
+                    <div class="projects-card">
                         <h3>Formation of Core Losses of Different Magnetic Materials</h3>
-                        <p>Studied core losses using transformer and hysteresis loop for various magnetic materials. <br><span class="project-date">June 2016 - April 2017</span></p>
-                        <div class="project-tags"><span>Physics</span><span>Electrical</span></div>
+                        <table class="projects-table">
+                            <tr><td>Studied core losses using transformer and hysteresis loop for various magnetic materials.</td></tr>
+                            <tr><td><span class="project-date">June 2016 - April 2017</span></td></tr>
+                            <tr><td><span class="project-tags"><span>Physics</span><span>Electrical</span></span></td></tr>
+                        </table>
                     </div>
                 </div>
             </section>
 
             <!-- Certifications Section -->
+            <!-- Certifications Section (Card Layout) -->
             <section id="certifications" class="alt-bg" aria-labelledby="certifications-title">
                 <h1 id="certifications-title">Certifications</h1>
-                <ul class="cert-list">
-                    <li>International Conference on Multifunctional & Hybrid Materials for Energy & Environment (MHMEE-2020), Y. C. College, Satara. (Jan 2020)</li>
-                    <li>NCC Cadet Participated in CATC (Aug 2014 & July 2015)</li>
-                    <li>MS-CIT (Aug 2012)</li>
-                </ul>
+                <div class="cert-card-grid">
+                    <div class="cert-card">
+                        <h3>International Conference</h3>
+                        <p>Multifunctional & Hybrid Materials for Energy & Environment (MHMEE-2020), Y. C. College, Satara.<br><span class="cert-date">Jan 2020</span></p>
+                    </div>
+                    <div class="cert-card">
+                        <h3>NCC Cadet</h3>
+                        <p>Participated in CATC<br><span class="cert-date">Aug 2014 & July 2015</span></p>
+                    </div>
+                    <div class="cert-card">
+                        <h3>MS-CIT</h3>
+                        <p><span class="cert-date">Aug 2012</span></p>
+                    </div>
+                </div>
             </section>
 
             <!-- Experience Section -->
@@ -214,7 +237,7 @@
             <!-- Contact Section -->
             <section id="contact" class="alt-bg" aria-labelledby="contact-title">
                 <h1 id="contact-title">Get In Touch</h1>
-                <div class="contact-grid">
+                <div class="contact-card-grid">
                     <div class="contact-card">
                         <h3>Contact Details</h3>
                         <div class="contact-row">
@@ -229,14 +252,10 @@
                             <span class="contact-icon" data-contacticon="email"></span>
                             <a href="mailto:vidyaraut17297@gmail.com">vidyaraut17297@gmail.com</a>
                         </div>
-                        <div class="contact-row">
-                            <span class="contact-icon" data-contacticon="linkedin"></span>
-                            <a href="https://www.linkedin.com/in/vidyaraut17/" target="_blank" rel="noopener noreferrer">linkedin.com/in/vidyaraut17</a>
-                        </div>
                     </div>
                     <div class="contact-card">
+                        <h3>Send a Message</h3>
                         <form class="contact-form" name="contact" method="POST" data-netlify="true">
-                            <h3>Send a Message</h3>
                             <input type="text" name="name" placeholder="Your Name" required />
                             <input type="email" name="email" placeholder="Your Email" required />
                             <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
@@ -245,12 +264,7 @@
                     </div>
                 </div>
             <!-- Fun: Crossword Game Section -->
-            <section id="fun-crossword" class="alt-bg" aria-labelledby="fun-crossword-title">
-                <div class="crossword-container">
-                    <h2 class="crossword-title" id="fun-crossword-title">Fun: Marathi Crossword Game</h2>
-                    <iframe class="crossword-iframe" src="https://marathigames.in/Crossword/crossword.html" title="Marathi Crossword Game" width="100%" height="420" style="border-radius:1rem;border:2px solid #e2e8f0;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,0.08);"></iframe>
-                </div>
-            </section>
+            <!-- Game section removed as requested. -->
             </section>
         </main>
 
