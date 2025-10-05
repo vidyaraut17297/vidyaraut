@@ -51,10 +51,13 @@ nav {
     align-items: center;
 }
 
-nav h2 {
-    color: #000;
-    font-size: 1.2em;
-    margin: 0;
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.logo-link {
+    text-decoration: none;
 }
 
 nav ul {
@@ -71,6 +74,7 @@ nav li {
 nav a {
     color: #000;
     text-decoration: none;
+    font-size: 0.9rem;
     transition: opacity 0.3s;
 }
 
@@ -112,6 +116,47 @@ nav a:hover {
     margin-bottom: 0.5rem;
 }
 
+/* Home Section */
+.home-section {
+    background: url('logo.png') center center / 200px 200px no-repeat;
+    background-attachment: fixed;
+    opacity: 1;
+    /* Optional subtle background */
+}
+
+.main-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+}
+
+.intro {
+    font-size: 1.5rem;
+    text-align: center;
+    font-style: italic;
+    margin: 2rem 0;
+    quotes: none;
+}
+
+.description {
+    text-align: center;
+    font-size: 1rem;
+}
+
 .content h1 {
     font-size: 3rem;
     margin: 0;
@@ -141,6 +186,19 @@ nav a:hover {
 
 .entry h2 {
     margin-top: 0;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-content p {
+    margin: 0;
 }
 
 /* Contact section same as others */
