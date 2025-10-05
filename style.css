@@ -1,3 +1,43 @@
+/* Crossword Fun Section Modern */
+.crossword-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 2rem 1rem 2.5rem 1rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+.crossword-title {
+    font-size: 2rem;
+    color: #005bb5;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.crossword-iframe {
+    width: 100%;
+    max-width: 700px;
+    min-width: 250px;
+    height: 420px;
+    border-radius: 1rem;
+    border: 2px solid #e2e8f0;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+@media (max-width: 900px) {
+    .crossword-container {
+        padding: 1rem 0.2rem 1.5rem 0.2rem;
+    }
+    .crossword-iframe {
+        max-width: 98vw;
+        height: 300px;
+    }
+}
 /* Contact grid for two-column layout */
 .contact-grid {
     display: grid;
@@ -430,7 +470,42 @@ h3 {
     font-weight: 600;
 }
 
-/* All sections have uniform white background */
+/* Unique section backgrounds for differentiation */
+#home.alt-bg {
+    background: #f5f5f7; /* Light gray */
+}
+
+#about {
+    background: #e8f4fd; /* Light blue */
+}
+
+#skills.alt-bg {
+    background: #f3e8fc; /* Light purple */
+}
+
+#projects {
+    background: #fcece8; /* Light coral */
+}
+
+#certifications.alt-bg {
+    background: #fff7e8; /* Light yellow */
+}
+
+#experience.alt-bg {
+    background: #e8f7ea; /* Light green */
+}
+
+#education {
+    background: #fefefe; /* Near white */
+}
+
+#contact.alt-bg {
+    background: #fce8f3; /* Light pink */
+}
+
+#fun-crossword.alt-bg {
+    background: #e8f7f0; /* Light mint */
+}
 
 .hero-image {
     border-radius: 2rem; /* Rectangle instead of circle */
