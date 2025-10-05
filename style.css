@@ -118,10 +118,8 @@ nav a:hover {
 
 /* Home Section */
 .home-section {
-    background: url('logo.png') center center / 200px 200px no-repeat;
-    background-attachment: fixed;
     opacity: 1;
-    /* Optional subtle background */
+    /* Centered great look */
 }
 
 .main-title {
