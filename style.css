@@ -67,102 +67,66 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 0 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Hero Section - Clean White */
-#about.hero-section {
+/* Home Section - Hero with Image */
+#home.hero-section {
     background: #fff;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     padding: 6rem 2rem;
 }
 
 .hero-content {
-    flex: 1;
-    text-align: left;
-    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .hero-image {
-    flex: 1;
-    max-width: 400px;
-    height: auto;
-    border-radius: 1rem;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
-.about-details {
-    flex: 1;
-    margin-left: 2rem;
+.text-content {
+    max-width: 500px;
+    text-align: center;
 }
 
 .main-title {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     line-height: 1.1;
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #86868b;
     margin-bottom: 1rem;
 }
 
 .location {
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.7;
-    margin-bottom: 1rem;
 }
 
-.hero-section .intro {
-    font-size: 1.3rem;
-    font-weight: 300;
-    quotes: none;
-    color: #6e6e73;
-    margin-bottom: 1rem;
+/* About Section - Light Gradient */
+#about {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 4rem 0;
 }
 
-/* Desktop styles */
-@media (min-width: 1025px) {
-    .hero-section {
-        text-align: left;
-    }
-}
-
-/* Tablet and Mobile */
-@media (max-width: 1024px) {
-    #about.hero-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 6rem 2rem 4rem;
-    }
-
-    .hero-content {
-        margin-right: 0;
-        margin-bottom: 2rem;
-    }
-
-    .hero-image {
-        max-width: 250px;
-        margin-bottom: 2rem;
-    }
-
-    .about-details {
-        margin-left: 0;
-    }
-
-    .main-title {
-        font-size: 2.5rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
+.about-content {
+    max-width: 800px;
+    text-align: center;
 }
 
 /* Education Section - Subtle Gradient */
@@ -199,8 +163,13 @@ section {
 }
 
 /* Content Styles */
-h1, h2, h3 {
+h1, h2 {
     color: #1d1d1f;
+    font-weight: 600;
+}
+
+h3 {
+    color: #6e6e73;
     font-weight: 600;
 }
 
