@@ -1,131 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidya Raut - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="app.js" defer></script>
-</head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo-link"><img src="logo.png" alt="Vidya Raut Logo" class="logo"></a>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vidya Raut - Portfolio</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <script src="education-icons.js" defer></script>
+        <script src="contact-icons.js" defer></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Education icons
+                const eduIcons = window.educationIcons || {};
+                document.querySelectorAll('[data-eduicon]').forEach((el) => {
+                    const key = el.getAttribute('data-eduicon');
+                    if (eduIcons[key]) el.innerHTML = eduIcons[key];
+                });
+                // Contact icons
+                const contactIcons = window.contactIcons || {};
+                document.querySelectorAll('[data-contacticon]').forEach((el) => {
+                    const key = el.getAttribute('data-contacticon');
+                    if (contactIcons[key]) el.innerHTML = contactIcons[key];
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-container" aria-label="Main Navigation">
+                <a href="#" class="logo-link" aria-label="Home">
+                    <img src="logo.png" alt="Vidya Raut Logo" class="logo" />
+                </a>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <img src="home picture.jpeg" alt="Vidya Raut" class="hero-image">
-            <div class="text-content">
-                <h1 class="main-title">Vidya Raut</h1>
-                <p class="subtitle">M.Tech in Energy Technology | Market Analyst | Energy Storage & Power Markets | Physics (MSc) | B.Ed (Science & Maths)</p>
-                <p class="location">Pune/Pimpri-Chinchwad Area</p>
-            </div>
-        </div>
-    </section>
+        <main>
+            <section id="home" class="hero-section" aria-labelledby="main-title">
+                <div class="hero-content">
+                    <img
+                        src="home picture.jpeg"
+                        alt="Vidya Raut portrait"
+                        class="hero-image"
+                        loading="lazy"
+                    />
+                    <div class="text-content">
+                        <h1 class="main-title" id="main-title">Vidya Raut</h1>
+                        <p class="subtitle">
+                            M.Tech in Energy Technology | Market Analyst | Energy Storage & Power
+                            Markets | Physics (MSc) | B.Ed (Science & Maths)
+                        </p>
+                        <p class="location">Pune/Pimpri-Chinchwad Area</p>
+                    </div>
+                </div>
+            </section>
 
-    <section id="about">
-        <h1>About</h1>
-        <div class="about-content">
-            <blockquote class="intro">
-                I'm an energy & power market analyst with experience turning sector data into concise insights and decision-ready dashboards.
-            </blockquote>
-            <p>My background spans Physics (BSc/MSc), B.Ed (Science/Maths), and M.Tech in Energy Technology (2025–2027), plus hands-on stints in energy storage (ESS) market research, lab support for battery R&D, and data analysis using Excel/Power BI.</p>
-            <p>I provide detailed reports that save leaders time and increase clarity for stakeholders who are not technical, such as quarterly or yearly briefs, competitor and policy trackers, and target views.</p>
-            <p><strong>Focus areas:</strong> Energy storage & power markets, hydrogen fuel, solar PV management, competitive intelligence, policy/tariff tracking, market sizing, and dashboards.</p>
-            <p><strong>Tools:</strong> Excel (advanced), PowerPoint Presentation.</p>
-            <p><strong>Looking for:</strong> Market/Energy Analyst roles where I can improve reporting speed/quality and support data-driven strategy.</p>
-        </div>
-    </section>
+            <section id="about" aria-labelledby="about-title">
+                <h1 id="about-title">About</h1>
+                <div class="about-content">
+                    <blockquote class="intro">
+                        I'm an energy & power market analyst with experience turning sector data
+                        into concise insights and decision-ready dashboards.
+                    </blockquote>
+                    <p>
+                        My background spans Physics (BSc/MSc), B.Ed (Science/Maths), and M.Tech
+                        in Energy Technology (2025–2027), plus hands-on stints in energy storage
+                        (ESS) market research, lab support for battery R&D, and data analysis using
+                        Excel/Power BI.
+                    </p>
+                    <p>
+                        I provide detailed reports that save leaders time and increase clarity for
+                        stakeholders who are not technical, such as quarterly or yearly briefs,
+                        competitor and policy trackers, and target views.
+                    </p>
+                    <p>
+                        <strong>Focus areas:</strong> Energy storage & power markets, hydrogen
+                        fuel, solar PV management, competitive intelligence, policy/tariff
+                        tracking, market sizing, and dashboards.
+                    </p>
+                    <p>
+                        <strong>Tools:</strong> Excel (advanced), PowerPoint Presentation.
+                    </p>
+                    <p>
+                        <strong>Looking for:</strong> Market/Energy Analyst roles where I can
+                        improve reporting speed/quality and support data-driven strategy.
+                    </p>
+                </div>
+            </section>
 
-    <section id="education">
-        <h1>Education</h1>
-        <ul class="education-list">
-            <li>
-                <h3>Savitribai Phule Pune University</h3>
-                <p>Master of Technology - MTech, Energy Technology · (July 2025 - May 2027)</p>
-            </li>
-            <li>
-                <h3>Shri Shivaji Maratha Societys Adhyapak Mahavidyalaya</h3>
-                <p>Bachelor of Education - BEd, Science and mathematics · (September 2020 - April 2022)</p>
-            </li>
-            <li>
-                <h3>The Poona Gujrati Kelwani Mandals H.V.Desai Senior College</h3>
-                <p>Master of Science - MS, Physics · (June 2018 - April 2020)</p>
-            </li>
-            <li>
-                <h3>Progressive Education Societys Modern College</h3>
-                <p>Bachelor's degree, Physics · (August 2014 - October 2017)</p>
-            </li>
-        </ul>
-    </section>
+            <section id="education" aria-labelledby="education-title">
+                <h1 id="education-title">Education</h1>
+                <div class="education-cards">
+                    <div class="edu-card">
+                        <div class="edu-icon" data-eduicon="mtech"></div>
+                        <div>
+                            <h3>Savitribai Phule Pune University</h3>
+                            <p>
+                                Master of Technology - MTech, Energy Technology<br />
+                                <span class="edu-date">July 2025 - May 2027</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-icon" data-eduicon="bed"></div>
+                        <div>
+                            <h3>Shri Shivaji Maratha Societys Adhyapak Mahavidyalaya</h3>
+                            <p>
+                                Bachelor of Education - BEd, Science and mathematics<br />
+                                <span class="edu-date">Sep 2020 - Apr 2022</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-icon" data-eduicon="msc"></div>
+                        <div>
+                            <h3>The Poona Gujrati Kelwani Mandals H.V.Desai Senior College</h3>
+                            <p>
+                                Master of Science - MS, Physics<br />
+                                <span class="edu-date">Jun 2018 - Apr 2020</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-icon" data-eduicon="bsc"></div>
+                        <div>
+                            <h3>Progressive Education Societys Modern College</h3>
+                            <p>
+                                Bachelor's degree, Physics<br />
+                                <span class="edu-date">Aug 2014 - Oct 2017</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section id="experience">
-        <h1>Experience</h1>
-        <div class="experience-grid">
-            <div class="exp-card">
-                <h3>Market Research Analyst</h3>
-                <p><strong>Customized Energy Solutions</strong></p>
-                <p>July 2023 - June 2024 (1 year) · Pune, Maharashtra, India</p>
-                <p>Analyzed energy sector data to provide strategic insights into market trends, consumer behavior, and competitor activities.</p>
-            </div>
-            <div class="exp-card">
-                <h3>Lab Intern</h3>
-                <p><strong>Customized Energy Solutions</strong></p>
-                <p>January 2023 - June 2023 (6 months) · Pune, Maharashtra, India</p>
-                <p>Assisted engineers with battery R&D, characterizing materials, assembling batteries, analyzing data, and maintaining lab records.</p>
-            </div>
-            <div class="exp-card">
-                <h3>Teaching Professional</h3>
-                <p><strong>S.S.V.M. & Jr. College</strong></p>
-                <p>May 2021 - October 2021 (6 months) · Aundh, Pune</p>
-                <p>Assisted lead teachers with lesson preparation and delivery, supporting students.</p>
-            </div>
-            <div class="exp-card">
-                <h3>Data Analyst</h3>
-                <p><strong>Customized Energy Solutions</strong></p>
-                <p>November 2017 - April 2018 (6 months) · Wakad, Pune</p>
-                <p>Developed interactive dashboards and reports using Microsoft Excel.</p>
-            </div>
-        </div>
-    </section>
+            <section id="experience" aria-labelledby="experience-title">
+                <h1 id="experience-title">Experience</h1>
+                <div class="experience-grid">
+                    <div class="exp-card">
+                        <h3>Market Research Analyst</h3>
+                        <p><strong>Customized Energy Solutions</strong></p>
+                        <p>July 2023 - June 2024 (1 year) · Pune, Maharashtra, India</p>
+                        <p>
+                            Analyzed energy sector data to provide strategic insights into market
+                            trends, consumer behavior, and competitor activities.
+                        </p>
+                    </div>
+                    <div class="exp-card">
+                        <h3>Lab Intern</h3>
+                        <p><strong>Customized Energy Solutions</strong></p>
+                        <p>January 2023 - June 2023 (6 months) · Pune, Maharashtra, India</p>
+                        <p>
+                            Assisted engineers with battery R&D, characterizing materials,
+                            assembling batteries, analyzing data, and maintaining lab records.
+                        </p>
+                    </div>
+                    <div class="exp-card">
+                        <h3>Teaching Professional</h3>
+                        <p><strong>S.S.V.M. & Jr. College</strong></p>
+                        <p>May 2021 - October 2021 (6 months) · Aundh, Pune</p>
+                        <p>
+                            Assisted lead teachers with lesson preparation and delivery,
+                            supporting students.
+                        </p>
+                    </div>
+                    <div class="exp-card">
+                        <h3>Data Analyst</h3>
+                        <p><strong>Customized Energy Solutions</strong></p>
+                        <p>November 2017 - April 2018 (6 months) · Wakad, Pune</p>
+                        <p>
+                            Developed interactive dashboards and reports using Microsoft Excel.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-    <section id="contact">
-        <h1>Contact</h1>
-        <div class="contact-info">
-            <div class="contact-card">
-                <h3>Address</h3>
-                <p>Kamble Corner, panchsheelnagar,<br>Pimple Nilakh, Pimpri-Chinchwad, Pune-411027</p>
-            </div>
-            <div class="contact-card">
-                <h3>Mobile</h3>
-                <p><a href="tel:+918446495690">+91 8446495690</a></p>
-            </div>
-            <div class="contact-card">
-                <h3>Email</h3>
-                <p><a href="mailto:vidyaraut17297@gmail.com">vidyaraut17297@gmail.com</a></p>
-            </div>
-            <div class="contact-card">
-                <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/vidyaraut17" target="_blank">linkedin.com/in/vidyaraut17</a></p>
-            </div>
-        </div>
-    </section>
+            <section id="contact" aria-labelledby="contact-title">
+                <h1 id="contact-title">Contact & Fun</h1>
+                <div class="contact-crossword-rows">
+                    <div class="contact-card compact-contact">
+                        <h3>Contact</h3>
+                        <div class="contact-row">
+                            <span class="contact-icon" data-contacticon="address"></span>
+                            <span
+                                >Kamble Corner, panchsheelnagar,<br />Pimple Nilakh,
+                                Pimpri-Chinchwad, Pune-411027</span
+                            >
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-icon" data-contacticon="phone"></span>
+                            <a href="tel:+918446495690">+91 8446495690</a>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-icon" data-contacticon="email"></span>
+                            <a href="mailto:vidyaraut17297@gmail.com"
+                                >vidyaraut17297@gmail.com</a
+                            >
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-icon" data-contacticon="linkedin"></span>
+                            <a
+                                href="https://www.linkedin.com/in/vidyaraut17"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >linkedin.com/in/vidyaraut17</a
+                            >
+                        </div>
+                    </div>
+                    <div class="crossword-row">
+                        <div class="crossword-card crossword-large">
+                            <h3>Try the Crossword!</h3>
+                            <iframe
+                                src="https://marathigames.in/Crossword/crossword.html"
+                                title="Marathi Crossword Game"
+                                width="700"
+                                height="700"
+                                style="border:1px solid #ccc; border-radius:1rem; background:#fff; min-width:350px; min-height:500px;"
+                                loading="lazy"
+                                aria-label="Marathi Crossword Game"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Vidya Raut. All rights reserved.</p>
-        </div>
-    </footer>
-
-</body>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Vidya Raut. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
 </html>

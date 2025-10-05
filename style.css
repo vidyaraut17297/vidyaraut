@@ -1,3 +1,126 @@
+/* Education Cards Modern Design */
+.education-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.edu-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #f5f5f7;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 2rem 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.edu-card:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+.edu-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.edu-date {
+    color: #86868b;
+    font-size: 0.95rem;
+}
+
+/* Contact Card Modern Row Design */
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    word-break: break-word;
+}
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+/* Contact & Crossword 2-Row Layout */
+.contact-crossword-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+/* Crossword Responsive Row Layout */
+.crossword-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.crossword-card.crossword-large {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+    border-radius: 1rem;
+    padding: 2rem 2rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.crossword-card.crossword-large iframe {
+    width: 100%;
+    max-width: 700px;
+    min-width: 0;
+    height: 60vw;
+    max-height: 700px;
+    min-height: 300px;
+    border-radius: 1rem;
+    background: #fff;
+}
+
+@media (max-width: 1100px) {
+    .crossword-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .crossword-card.crossword-large {
+        max-width: 100vw;
+        padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+    .crossword-card.crossword-large iframe {
+        width: 100vw;
+        max-width: 100vw;
+        height: 60vw;
+        max-height: 400px;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .crossword-card.crossword-large {
+        padding: 0.5rem 0.1rem 0.5rem 0.1rem;
+    }
+    .crossword-card.crossword-large iframe {
+        width: 98vw;
+        max-width: 98vw;
+        height: 60vw;
+        max-height: 300px;
+        min-height: 150px;
+    }
+}
+    /* removed duplicate/broken rules */
 /* Apple.com Inspired Design */
 @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap');
 
@@ -71,8 +194,8 @@ section {
     padding: 0 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1; /* <-- Fix here */
+    transform: none; /* <-- Fix here */
     transition: opacity 1s ease, transform 1s ease;
 }
 
