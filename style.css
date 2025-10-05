@@ -583,21 +583,6 @@
     }
 }
     /* removed duplicate/broken rules */
-/* Light/dark mode CSS variables */
-:root {
-    --bg-color: #fff;
-    --bg-alt: #f5f5f7;
-    --text-color: #1d1d1f;
-    --header-bg: #1d1d1f;
-    --header-text: #f5f5f7;
-    --card-bg: #fff;
-    --card-shock: rgba(0,0,0,0.08);
-    --link-color: #0071e3;
-    --hover-color: #005bb5;
-}
-
-
-
 /* Apple.com Inspired Design */
 @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap');
 
@@ -611,10 +596,9 @@ body {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 17px;
     line-height: 1.6;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: #fff;
+    color: #1d1d1f;
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -662,35 +646,10 @@ header .nav-container {
 }
 
 .nav-list li a:hover {
-    color: var(--link-color);
+    color: #0071e3;
 }
 
-/* Theme toggle button */
-.theme-toggle {
-    background: var(--header-bg);
-    border: 1px solid #424245;
-    color: var(--header-text);
-    padding: 0.5rem 0.8rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    margin-left: 1rem;
-}
 
-.theme-toggle:hover {
-    background: var(--header-text);
-    color: var(--header-bg);
-    transform: scale(1.05);
-}
-
-[data-theme="dark"] .theme-toggle {
-    content: "🌙";
-}
-
-[data-theme="dark"] .theme-toggle:before {
-    content: "🌙";
-}
 
 /* Make spacing equal from logo to last nav item by centering container */
 .logo-link {
