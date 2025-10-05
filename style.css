@@ -24,9 +24,8 @@ html {
 header {
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid #d2d2d7;
+    background: #1d1d1f;
+    border-bottom: 1px solid #424245;
     z-index: 1000;
 }
 
@@ -51,7 +50,7 @@ header ul {
 }
 
 header a {
-    color: #1d1d1f;
+    color: #f5f5f7;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 400;
@@ -73,7 +72,9 @@ section {
     margin: 0 auto;
 }
 
-.hero-section {
+/* Hero Section - Clean White */
+#about.hero-section {
+    background: #fff;
     text-align: center;
     padding: 8rem 2rem 6rem;
 }
@@ -98,6 +99,43 @@ section {
     margin: 0 auto;
     quotes: none;
     color: #6e6e73;
+}
+
+/* Education Section - Subtle Gradient */
+#education {
+    background: linear-gradient(135deg, #f5f5f7 0%, #d2d2d7 100%);
+    color: #1d1d1f;
+}
+
+#education h1 {
+    color: #005bb5;
+}
+
+.education-list li {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+/* Experience Section - Minimalist White */
+#experience {
+    background: #fff;
+}
+
+/* Contact Section - Blue Accent */
+#contact {
+    background: linear-gradient(135deg, #0071e3 0%, #005bb5 100%);
+    color: #fff;
+}
+
+#contact h1 {
+    color: #fff;
+}
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
 }
 
 /* Content Styles */
