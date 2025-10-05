@@ -831,25 +831,59 @@ blockquote {
     margin: 2rem 0;
 }
 
-/* Grid for Experience */
-.experience-grid {
+/* Experience Cards Layout like Education */
+.experience-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .exp-card {
-    background: #f5f5f7;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-direction: column;
+    text-align: center;
 }
 
-.exp-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+.exp-card h3 {
+    color: #005bb5;
+    margin-bottom: 0.5rem;
+}
+
+.exp-date {
+    color: #86868b;
+    font-size: 0.95rem;
+}
+
+    /* Consistent Card Design for All Sections */
+.exp-card, .contact-card, .skills-card, .projects-card, .edu-card, .cert-card, .about-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.exp-card:hover, .contact-card:hover, .skills-card:hover, .projects-card:hover, .edu-card:hover, .cert-card:hover, .about-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.exp-card {
+    padding: 2.5rem 2rem;
+}
+
+.about-card {
+    padding: 3rem 2rem;
+}
+
+.skills-card, .projects-card, .edu-card, .cert-card {
+    padding: 2rem 1.5rem;
+}
+
+.contact-card {
+    padding: 2.5rem 1.5rem;
 }
 
 .exp-card h3 {
