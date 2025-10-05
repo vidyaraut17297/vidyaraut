@@ -596,17 +596,7 @@
     --hover-color: #005bb5;
 }
 
-[data-theme="dark"] {
-    --bg-color: #121212;
-    --bg-alt: #1a1a1a;
-    --text-color: #f5f5f7;
-    --header-bg: #000;
-    --header-text: #fafafa;
-    --card-bg: #1e1e1e;
-    --card-shock: rgba(0,0,0,0.12);
-    --link-color: #0a84ff;
-    --hover-color: #1e6fb9;
-}
+
 
 /* Apple.com Inspired Design */
 @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap');
@@ -1381,95 +1371,4 @@ blockquote {
 
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #0b0b0c;
-        color: #e6eef8;
-    }
-
-    header {
-        background: rgba(10,10,12,0.98);
-        border-bottom-color: rgba(255,255,255,0.06);
-    }
-
-    .logo {
-        filter: brightness(0.95) saturate(0.9);
-    }
-
-    .nav-list li a {
-        color: #e6eef8;
-    }
-
-    .nav-list li a:hover {
-        color: #79b8ff;
-    }
-
-    /* Cards */
-    .project-card,
-    .skills-card,
-    .cert-card,
-    .contact-card,
-    .education-card,
-    .exp-card,
-    .about-card,
-    .projects-card,
-    .crossword-card.crossword-large,
-    .crossword-container,
-    .game-card {
-        background: linear-gradient(180deg, #0f1214 0%, #0b0d0f 100%);
-        color: #dbe9ff;
-        box-shadow: 0 6px 30px rgba(2,6,23,0.6);
-        border: 1px solid rgba(255,255,255,0.03);
-    }
-
-    /* Tables and list text inside cards */
-    .skills-table td,
-    .projects-table td,
-    .education-table td,
-    .project-date,
-    .cert-date,
-    .edu-date,
-    p, li {
-        color: #cbdff6;
-    }
-
-    /* Inputs */
-    input, textarea {
-        background: #0c0d0f;
-        color: #e6eef8;
-        border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .resume-btn {
-        background: linear-gradient(180deg,#0a84ff,#0063d1);
-        color: #fff;
-    }
-
-    footer {
-        background: rgba(7,7,8,0.98);
-        color: #cfe6ff;
-        border-top-color: rgba(255,255,255,0.04);
-    }
-
-    a {
-        color: #9fd1ff;
-    }
-
-    /* Focus outlines to be visible in dark */
-    *:focus {
-        outline: 2px solid rgba(120,180,255,0.9);
-        outline-offset: 2px;
-    }
-
-    /* Reduce heavy shadows on dark for better contrast */
-    .project-card:hover,
-    .skills-card:hover,
-    .cert-card:hover,
-    .contact-card:hover,
-    .education-card:hover,
-    .exp-card:hover {
-        box-shadow: 0 10px 40px rgba(2,6,23,0.7);
-        transform: translateY(-6px);
-    }
-}
+/* Dark mode removed - site will use default (light) styles */
