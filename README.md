@@ -116,7 +116,7 @@ vidyaraut17297@gmail.com
 +91 8446495690 (Phone & WhatsApp)
 
 ### Location
-🇮🇳 Pune, MH, India
+Pune, MH, India
 
 ### Follow Me on LinkedIn
 [LinkedIn Profile](https://www.linkedin.com/in/vidyaraut17/)
