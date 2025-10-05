@@ -873,9 +873,22 @@ blockquote {
     margin-bottom: 0.5rem;
 }
 
-.exp-date {
+.exp-card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.exp-card p + p {
+    margin-top: 0.3rem;
+}
+
+.exp-location {
     color: #86868b;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+}
+
+.exp-card strong {
+    color: #005bb5;
 }
 
     /* Consistent Card Design for All Sections */
@@ -1218,6 +1231,35 @@ blockquote {
 
     .logo {
         height: 30px;
+    }
+
+    /* Smartphone navigation fix */
+    header .nav-container {
+        padding: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    header ul {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header li {
+        padding: 0.25rem 0.5rem;
+    }
+
+    header a {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.2rem;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    header a:hover {
+        background: rgba(0, 113, 227, 0.3);
     }
 }
 
