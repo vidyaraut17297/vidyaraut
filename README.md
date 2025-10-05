@@ -106,11 +106,21 @@ cd vidyaraut
 
 ---
 
-## 📞 Contact & Connect
+## 📞 Contact Information
 
-Vidya Raut | Pune, India
+Feel free to reach out via email or connect on social media.
 
-[Portfolio](https://vidyaraut17297.github.io/vidyaraut/) | [LinkedIn](https://www.linkedin.com/in/vidyaraut17/) | [GitHub](https://github.com/vidyaraut17297) | [Email](mailto:vidyaraut17297@gmail.com)
+### Email
+vidyaraut17297@gmail.com
+
+### Phone
++91 8446495690 (Phone & WhatsApp)
+
+### Location
+🇮🇳 Pune, MH, India
+
+### Follow Me on LinkedIn
+[LinkedIn Profile](https://www.linkedin.com/in/vidyaraut17/)
 
 Built with ❤️ using Apple's design philosophy and modern web standards.
 
