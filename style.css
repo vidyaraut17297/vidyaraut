@@ -1,0 +1,131 @@
+/* Google Fonts - Serif Inspired by Steve Jobs Archive */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Georgia:wght@400;700&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Crimson Text', serif;
+    color: #000;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Summary */
+.summary {
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #000;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    margin-left: 40px;
+}
+
+.timeline-content h3, .timeline-content h4 {
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+footer h3 {
+    margin: 0 0 10px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-content {
+        margin-left: 25px;
+    }
+}
