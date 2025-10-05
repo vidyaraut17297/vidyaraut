@@ -9,28 +9,24 @@ An elegant, Apple-inspired portfolio website showcasing my professional journey 
 ## ✨ Key Features
 
 ### 🎨 Apple.com Design Language
-- Visual redesign matching Apple's aesthetic standards
-- Precise color palette (#ffffff, #f5f5f7, #1d1d1f, #6e6e73, #0071e3)
-- SF Pro typography system
-- Apple's signature spacing and grid systems
-- Modern glass and card aesthetics
+- Visual redesign inspired by Apple's aesthetic
+- Precise color palette and SF Pro typography
+- Modern glass, card, and spacing systems for a clean look
 
 ### 🌟 Premium User Experience
-- Fully responsive design for all devices (desktop, tablet, mobile)
-- Smooth navigation with hover animations
-- Alternating section backgrounds (white/grey pattern)
-- Interactive animations and transitions
+- Fully responsive across desktop, tablet, and mobile
+- Smooth navigation with hover and focus states
+- Unified card layout for sections (About, Skills, Projects, Education, Experience, Contact)
+- Lightweight animations driven by Intersection Observer
 
 ### 📱 Responsive & Accessible Design
-- Mobile-first breakpoint system
-- Touch-friendly buttons and proper touch targets
-- Accessibility-compliant design with proper focus states
+- Mobile-first breakpoints and touch-friendly controls
+- Visible focus outlines and high-contrast support
 
 ### 🛠️ Technical Features
-- Modern HTML5, CSS3, and JavaScript (ES6+)
-- Intersection Observer for animations
-- SVG icon system for education and contact
-- Fun embedded crossword game
+- HTML5, CSS3, and modern JavaScript (ES6+)
+- Simple SVG icon loader for education and contact
+- Optional embedded/linked Marathi crossword game for visitors
 
 ---
 
@@ -47,13 +43,14 @@ An elegant, Apple-inspired portfolio website showcasing my professional journey 
 
 ```
 vidyaraut/
-├── index.html                 # Main HTML document with Apple design structure
-├── style.css                  # Complete Apple-inspired design system
-├── app.js                     # Interactive features and animations
+├── index.html                 # Main HTML document (sections: Home, About, Skills & Technologies, Projects, Certifications, Experience, Education, Contact)
+├── style.css                  # Design system and responsive styles
+├── app.js                     # Interactive features and Intersection Observer animations
 ├── education-icons.js         # SVG icons for education section
 ├── contact-icons.js           # SVG icons for contact section
 ├── logo.png                   # Navigation logo
 ├── home picture.jpeg          # Hero image
+├── README.md                  # Project documentation (this file)
 └── README.md                  # Project documentation
 ```
 
@@ -69,6 +66,8 @@ cd vidyaraut
 
 ### Open Locally
 - Open `index.html` in your browser (no server required)
+
+Note: The Marathi crossword game used to be embedded on the site for visitors' fun. It now opens in a new tab via the following link in the site: https://marathigames.in/Crossword/crossword.html
 
 ### Deploy to GitHub Pages
 1. Push to your GitHub repository
