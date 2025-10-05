@@ -1041,10 +1041,38 @@ blockquote {
     line-height: 1.4;
 }
 
-/* Mobile responsiveness */
+/* Tablet responsiveness */
 @media (max-width: 1024px) {
     .hero-section .main-title {
         font-size: 3rem;
+    }
+
+    /* Adjust nav for tablets */
+    header .nav-container {
+        padding: 1rem 2rem;
+    }
+
+    header ul {
+        gap: 1.5rem;
+    }
+
+    /* Card grids for tablets */
+    .experience-cards, .education-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .skills-card-grid, .projects-card-grid, .cert-card-grid {
+        gap: 1.5rem;
+    }
+
+    /* Section padding for tablets */
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    .hero-section {
+        padding: 5rem 1.5rem;
     }
 }
 
