@@ -110,6 +110,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('header ul');
+
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        navToggle.classList.toggle('open');
+    });
+
+    // Close menu when link clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('show');
+            navToggle.classList.remove('open');
+        });
+    });
+
     // Overall page animation on load
     gsap.from("header", {y: -100, duration: 0.8, ease: "power2.out"});
     gsap.from("footer", {y: 100, duration: 0.8, ease: "power2.out", delay: 0.2});
