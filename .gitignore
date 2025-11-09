@@ -1,15 +1,6 @@
 # Dependencies
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-pnpm-lock.yaml*
-
-# Build outputs
-dist-ssr/
-build/
-*.local
+backend/node_modules/
 
 # Environment variables
 .env
@@ -21,14 +12,30 @@ backend/.env
 backend/.env.local
 backend/.env.production
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-.idea/
-*.swp
-*.swo
-*~
+# Build outputs
+dist-ssr/
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory
+coverage/
+*.lcov
+.nyc_output/
+
+# Vercel deployment
+.vercel/
 
 # OS generated files
 .DS_Store
@@ -40,29 +47,14 @@ ehthumbs.db
 Thumbs.db
 Desktop.ini
 
-# Logs
-logs/
-*.log
-lerna-debug.log*
-npm-debug.log*
-
-# Runtime data
-pids/
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
-coverage/
-*.lcov
-.nyc_output/
-
-# Vercel deployment
-.vercel/
-.netlify/
-
-# GitHub Pages deployment
-.github/workflows/*.log
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
 
 # Temporary folders
 tmp/
@@ -74,14 +66,3 @@ cache/
 *.backup
 *.orig
 *.rej
-
-# Local development
-.env.local
-.env.development
-.env.test
-
-# API keys and secrets (additional safety)
-*.key
-*.pem
-secrets.json
-config.local.json
