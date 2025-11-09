@@ -109,7 +109,7 @@ router.post('/chat', async (req, res) => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEY_FALLBACK || process.env.NEXT_PUBLIC_OPENROUTER_API_KEY || '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'}`,
+            'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEY_FALLBACK || process.env.NEXT_PUBLIC_OPENROUTER_API_KEY}`,
             'HTTP-Referer': process.env.YOUR_SITE_URL || process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000',
             'X-Title': 'Vidya Raut Portfolio AI Assistant',
             'User-Agent': 'Vidya-Raut-Portfolio/1.0'
