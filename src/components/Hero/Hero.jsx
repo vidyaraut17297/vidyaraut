@@ -1,67 +1,15 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
 import { heroContent } from '../../utils/constants';
 import styles from './Hero.module.css';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Hero = () => {
-  const heroRef = useRef(null);
-  const contentRef = useRef(null);
-  const imageRef = useRef(null);
-
-  useEffect(() => {
-    // Initialize animations
-    if (heroRef.current && contentRef.current && imageRef.current) {
-      // Initial state
-      gsap.set([contentRef.current.children], { y: 50, opacity: 0 });
-
-      // Animate in the content
-      gsap.to([contentRef.current.children], {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: 0.2,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: 'top 80%',
-          once: true,
-        },
-      });
-
-      // Parallax effect for hero image
-      gsap.to(imageRef.current, {
-        y: '+=20',
-        rotation: 2,
-        duration: 2,
-        yoyo: true,
-        repeat: -1,
-        ease: 'power2.inOut',
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true,
-        },
-      });
-    }
-
-    // Cleanup
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
-
   return (
     <section
       id="home"
-      ref={heroRef}
       className={`${styles.heroSection} ${styles.altBg}`}
     >
       <div className={`${styles.heroContent} container`}>
-        <div ref={imageRef} className={styles.heroImage}>
+        <div className={styles.heroImage}>
           <img
             src="/home picture.jpeg"
             alt="Vidya Raut portrait"
@@ -85,7 +33,7 @@ const Hero = () => {
             }}
           />
         </div>
-        <div ref={contentRef} className={styles.textContent}>
+        <div className={styles.textContent}>
           <h1 className={styles.mainTitle}>{heroContent.name}</h1>
           <p className={styles.subtitle}>{heroContent.title}</p>
           <p className={styles.location}>{heroContent.location}</p>

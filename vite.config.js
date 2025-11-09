@@ -23,8 +23,7 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          gsap: ['gsap', 'gsap/ScrollTrigger']
+          vendor: ['react', 'react-dom']
         }
       }
     }
