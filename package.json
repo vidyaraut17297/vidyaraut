@@ -11,7 +11,8 @@
     "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
     "dev:full": "concurrently \"npm run dev\" \"cd backend && npm run dev\"",
     "start:full": "concurrently \"npx serve dist\" \"cd backend && npm start\"",
-    "vercel-build": "npm run build"
+    "vercel-build": "npm run build",
+    "deploy": "npm run build && copy dist\\index.html . && if not exist assets mkdir assets && copy dist\\assets\\* assets\\"
   },
   "dependencies": {
     "lucide-react": "^0.553.0",
