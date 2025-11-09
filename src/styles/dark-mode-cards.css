@@ -1,0 +1,139 @@
+/** 
+ * ═══════════════════════════════════════════════════════════
+ * DARK MODE UNIFIED DESIGN 
+ * All Black backgrounds with Dark Grey cards
+ * Blue borders and Blue headings
+ * ═══════════════════════════════════════════════════════════
+ */
+
+/* ALL SECTIONS - Black Background */
+html.dark section,
+html.dark #about,
+html.dark #skills,
+html.dark #experience,
+html.dark #projects,
+html.dark #education,
+html.dark #publications,
+html.dark #awards,
+html.dark #certifications,
+html.dark #contact {
+  background: #000000 !important;
+}
+
+/* ALL CARDS & TABLES - Dark Grey with Grey Borders */
+html.dark .card,
+html.dark .bg-primary,
+html.dark .experience-card,
+html.dark .education-card,
+html.dark .project-card,
+html.dark .section-card,
+html.dark div[class*='card'],
+html.dark div[class*='bg-'] {
+  background: #1c1c1e !important;
+  border: 2px solid #404040 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* EXPERIENCE CARDS - Consistent Grey Borders in Dark Mode */
+html.dark .exp-card {
+  background: #1c1c1e !important;
+}
+
+html.dark .exp-card:hover {
+  border-color: rgba(0, 122, 255, 0.4) !important;
+}
+
+html.dark .experience-footer {
+  border: 2px solid #404040 !important;
+  background: rgba(0, 122, 255, 0.05) !important;
+}
+
+html.dark .metric {
+  border: 1px solid #404040 !important;
+  background: #1c1c1e !important;
+}
+
+html.dark .metric:hover {
+  border-color: rgba(0, 122, 255, 0.4) !important;
+  background: rgba(0, 122, 255, 0.08) !important;
+}
+
+html.dark table {
+  background: #1c1c1e !important;
+  border: 1px solid #404040 !important;
+}
+
+html.dark table th {
+  background: #0a0a0a !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #404040 !important;
+}
+
+html.dark table td {
+  color: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid rgba(64, 64, 64, 0.3) !important;
+}
+
+/* GENERAL CARD IMPROVEMENTS */
+html.dark .card {
+  box-shadow:
+    0 4px 20px rgba(0, 122, 255, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+html.dark .card:hover {
+  box-shadow:
+    0 8px 32px rgba(0, 122, 255, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+/* TEXT COLORS - Blue Headings, White Main */
+/* Main Headings (h1, h2) - WHITE */
+html.dark h1,
+html.dark h2 {
+  color: #ffffff !important;
+}
+
+/* Sub Headings (h3, h4) - BLUE */
+html.dark h3,
+html.dark h4,
+html.dark .card h3,
+html.dark .card h4 {
+  color: #0a84ff !important;
+}
+
+/* Paragraphs and Content - White */
+html.dark p,
+html.dark span,
+html.dark .text-sm,
+html.dark li {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Links - Blue */
+html.dark a {
+  color: #0a84ff !important;
+}
+
+html.dark a:hover {
+  color: #64d2ff !important;
+}
+
+/* HOVER EFFECTS - Subtle Blue Glow */
+html.dark .card:hover,
+html.dark .education-card:hover,
+html.dark .experience-card:hover,
+html.dark .project-card:hover {
+  border-color: rgba(0, 122, 255, 0.3) !important;
+  box-shadow:
+    0 8px 32px rgba(0, 122, 255, 0.15),
+    0 0 0 1px rgba(0, 122, 255, 0.2) !important;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  html.dark .card {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,53 @@
+.themeToggle {
+  background: rgba(255, 255, 255, 0.95);
+  border: 0.5px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-full);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  margin-right: var(--space-md);
+}
+
+/* Dark theme toggle */
+.dark-theme .themeToggle {
+  background: rgba(28, 28, 30, 0.95);
+  border: 0.5px solid rgba(255, 255, 255, 0.06);
+  color: var(--color-white);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.themeToggle:hover {
+  background: rgba(245, 245, 247, 0.95);
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark theme hover */
+.dark-theme .themeToggle:hover {
+  background: rgba(44, 44, 46, 0.95);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .themeToggle {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: var(--font-size-base);
+    margin-right: var(--space-sm);
+  }
+}
