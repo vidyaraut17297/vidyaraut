@@ -1,19 +1,7 @@
 {
   "version": 2,
-  "name": "vidya-raut-portfolio",
   "buildCommand": "npm run build",
-  "installCommand": "npm install",
   "outputDirectory": "dist",
-  "functions": {
-    "api/chat.js": {
-      "runtime": "@vercel/node",
-      "maxDuration": 30
-    },
-    "api/health.js": {
-      "runtime": "@vercel/node",
-      "maxDuration": 10
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
