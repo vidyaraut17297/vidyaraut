@@ -1,8 +1,7 @@
 # 🚀 Vidya Raut - Portfolio
 
-[![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-[![GSAP](https://img.shields.io/badge/GSAP-3.13.0-0AC775?style=for-the-badge&logo=greensock)](https://greensock.com/gsap/)
 [![Node.js](https://img.shields.io/badge/Node.js-16+-339933?style=for-the-badge&logo=node.js)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-4.18.2-000000?style=for-the-badge&logo=express)](https://expressjs.com/)
 [![OpenRouter](https://img.shields.io/badge/OpenRouter-AI-FF6B35?style=for-the-badge)](https://openrouter.ai/)
@@ -16,7 +15,7 @@
 > **M.Tech in Energy Technology | Market Analyst | Energy Storage & Power Markets**  
 > *Physics (MSc) | B.Ed (Science & Maths) | 2+ Years Energy Sector Experience*
 
-A modern, responsive portfolio website showcasing professional expertise in energy markets, battery R&D, and data analysis. Features an AI-powered chatbot, smooth GSAP animations, and Apple-inspired design aesthetics.
+A modern, responsive portfolio website showcasing professional expertise in energy markets, battery R&D, and data analysis. Features an AI-powered chatbot and Apple-inspired design aesthetics.
 
 ## ✨ Features
 
@@ -45,7 +44,6 @@ A modern, responsive portfolio website showcasing professional expertise in ener
 
 ### ⚡ **Performance & Technical**
 - **Lightning Fast**: Vite-powered build with code splitting and tree-shaking
-- **Smooth Animations**: GSAP ScrollTrigger for 60fps animations
 - **Optimized Bundle**: Efficient chunking and lazy loading
 - **SEO Ready**: Meta tags and structured data
 - **PWA Ready**: Service worker and manifest ready
@@ -57,7 +55,6 @@ A modern, responsive portfolio website showcasing professional expertise in ener
 {
   "React": "18.2.0",
   "Vite": "7.1.7",
-  "GSAP": "3.13.0",
   "Lucide React": "0.553.0",
   "CSS Modules": "Latest",
   "ESLint": "9.39.1",
@@ -253,7 +250,6 @@ The application is tested on modern browsers including Chrome, Firefox, Safari, 
 ## Performance
 
 - Production build optimized with code splitting
-- GSAP animations for smooth 60fps transitions
 - Efficient memory usage with proper cleanup
 - Tree-shaking for smaller bundle sizes
 
@@ -436,7 +432,6 @@ git push origin feature/amazing-feature
 
 - **React Team** for the amazing framework
 - **Vite Team** for the lightning-fast build tool
-- **GSAP** for smooth animations
 - **OpenRouter** for AI API access
 - **Vercel** for seamless deployment
 - **Lucide** for beautiful icons
