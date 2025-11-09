@@ -1,45 +1,34 @@
 import React from 'react';
 
-import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
-import Navigation from './components/Navigation/Navigation';
-import Hero from './components/Hero/Hero';
-import AboutSection from './sections/About';
-import SkillsSection from './sections/Skills';
-import ProjectsSection from './sections/Projects';
-import CertificationsSection from './sections/Certifications';
-import ExperienceSection from './sections/Experience';
-import EducationSection from './sections/Education';
-import FunCrosswordSection from './sections/FunCrossword';
-import ContactSection from './sections/Contact';
-import Footer from './components/Footer/Footer';
-import AIChatbot from './components/AIChatbot/AIChatbot';
-
-import './styles/global.css';
-import './styles/animations.css';
-import './styles/card-layouts.css';
-import './styles/mobile-friendly.css';
-import './styles/dark-mode-cards.css';
-
 function App() {
   return (
-    <ErrorBoundary>
-      <div className="App">
-        <Navigation />
-        <main>
-          <Hero />
-          <AboutSection />
-          <SkillsSection />
-          <ProjectsSection />
-          <CertificationsSection />
-          <ExperienceSection />
-          <EducationSection />
-          <ContactSection />
-          <FunCrosswordSection />
-        </main>
-        <Footer />
-        <AIChatbot />
+    <div style={{
+      padding: '20px',
+      fontFamily: 'Arial, sans-serif',
+      textAlign: 'center',
+      backgroundColor: '#f5f5f5',
+      minHeight: '100vh'
+    }}>
+      <h1 style={{ color: '#0071e3', marginBottom: '20px' }}>
+        Vidya Raut - Portfolio
+      </h1>
+      <p style={{ fontSize: '18px', color: '#333' }}>
+        Welcome to my portfolio website!
+      </p>
+      <p style={{ fontSize: '16px', color: '#666', marginTop: '20px' }}>
+        M.Tech in Energy Technology | Market Analyst | Energy Storage & Power Markets
+      </p>
+      <div style={{
+        marginTop: '30px',
+        padding: '20px',
+        backgroundColor: 'white',
+        borderRadius: '8px',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
+      }}>
+        <h2>Website Status: ✅ Working!</h2>
+        <p>The portfolio website is successfully deployed and running.</p>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
 
