@@ -55,7 +55,7 @@ A modern, responsive portfolio website showcasing professional expertise in ener
 ### **Frontend**
 ```json
 {
-  "React": "19.1.1",
+  "React": "18.2.0",
   "Vite": "7.1.7",
   "GSAP": "3.13.0",
   "Lucide React": "0.553.0",
