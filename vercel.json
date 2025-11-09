@@ -6,11 +6,11 @@
   "outputDirectory": "dist",
   "functions": {
     "api/chat.js": {
-      "runtime": "nodejs18.x",
+      "runtime": "@vercel/node",
       "maxDuration": 30
     },
     "api/health.js": {
-      "runtime": "nodejs18.x",
+      "runtime": "@vercel/node",
       "maxDuration": 10
     }
   },
