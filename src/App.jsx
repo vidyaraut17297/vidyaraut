@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
 
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import Navigation from './components/Navigation/Navigation';
@@ -22,49 +20,7 @@ import './styles/card-layouts.css';
 import './styles/mobile-friendly.css';
 import './styles/dark-mode-cards.css';
 
-// Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger);
-
 function App() {
-  useEffect(() => {
-    // Initialize animation effects only - theme is handled by ThemeToggle component
-    // Set initial state for page load animation
-    gsap.set('body', { autoAlpha: 0 });
-
-    // Fade in the entire page with elegant transition
-    gsap.to('body', { autoAlpha: 1, duration: 0.8, ease: 'power2.out' });
-
-    // Enhanced scroll animations for sections (keeping section animations)
-    gsap.utils.toArray('section').forEach(section => {
-      gsap.fromTo(
-        section,
-        {
-          y: 50,
-          opacity: 0,
-          scale: 0.98,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 1,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      );
-    });
-
-    // Cleanup function
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
-
   return (
     <ErrorBoundary>
       <div className="App">
