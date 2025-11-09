@@ -1,0 +1,215 @@
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-base);
+  transition: all var(--transition-slow) ease-out;
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-2xl);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Light theme card */
+:root:not(.dark-theme) .card {
+  background: var(--color-white);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark theme card - black background with white text and border */
+.dark-theme .card {
+  background: #000000; /* Black background */
+  border-color: rgba(255, 255, 255, 0.3); /* White/light border */
+  color: #ffffff; /* White text */
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border),
+    transparent
+  );
+}
+
+.card--hover:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.card--outlined {
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+  padding: var(--space-2xl);
+}
+
+.card--outlined.card--hover:hover {
+  box-shadow: var(--shadow-base);
+  transform: translateY(-4px) scale(1.005);
+}
+
+.card--elevated {
+  box-shadow: var(--shadow-md);
+  padding: var(--space-2xl);
+}
+
+.card--elevated.card--hover:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-6px) scale(1.01);
+}
+
+.card--flat {
+  box-shadow: none;
+  background: var(--color-background-light);
+  padding: var(--space-2xl);
+  border: 1px solid var(--color-border);
+}
+
+.card--flat.card--hover:hover {
+  background: var(--color-white);
+  box-shadow: var(--shadow-base);
+  transform: translateY(-2px);
+}
+
+/* Special styling for specific card types - Apple.com inspired */
+.edu-card,
+.exp-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xl);
+  text-align: left;
+  min-height: 160px;
+}
+
+.edu-icon {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.skills-card,
+.projects-card,
+.cert-card,
+.contact-card,
+.about-card {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.skills-card h3,
+.projects-card h3,
+.cert-card h3,
+.contact-card h3 {
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Enhanced table styling for Apple.com aesthetic */
+.skills-table,
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-md);
+}
+
+.skills-table td,
+.projects-table td {
+  padding: var(--space-md) var(--space-lg);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.skills-table tr:last-child td,
+.projects-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Project tags styling */
+.project-tags {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+.project-tags span {
+  background: var(--color-background-light);
+  color: var(--color-primary-dark);
+  border-radius: var(--radius-full);
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card {
+    padding: var(--space-xl);
+  }
+
+  .edu-card,
+  .exp-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--space-lg);
+    transform: none !important; /* Override hover effect on mobile */
+    box-shadow: var(--shadow-base);
+  }
+
+  .card--hover:hover {
+    transform: none !important;
+  }
+
+  .edu-card,
+  .exp-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .edu-icon {
+    align-self: flex-start;
+  }
+
+  .skills-card,
+  .projects-card,
+  .cert-card,
+  .contact-card,
+  .about-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--space-md);
+  }
+
+  .edu-card,
+  .exp-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .edu-icon {
+    align-self: center;
+    margin-top: 0;
+  }
+}

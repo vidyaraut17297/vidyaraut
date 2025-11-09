@@ -1,0 +1,157 @@
+/* Animation styles - Apple.com inspired */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0.5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0.5deg);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.gradient-shift {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Smooth transitions */
+.transition-transform {
+  transition: all var(--transition-slower) cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Hover effects */
+.hover-scale {
+  transition: all var(--transition-base) cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.hover-scale:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+.hover-shadow {
+  transition: box-shadow var(--transition-base)
+    cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.hover-shadow:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Apple.com style entrance animations */
+.entrance-fade {
+  opacity: 0;
+  animation: fadeIn 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards 0.2s;
+}
+
+.entrance-slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards 0.3s;
+}
+
+.entrance-scale {
+  opacity: 0;
+  transform: scale(0.98);
+  animation: scaleIn 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards 0.4s;
+}
+
+/* Staggered animations */
+.entrance-fade:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.entrance-fade:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.entrance-fade:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.entrance-fade:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+.entrance-slide-up:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.entrance-slide-up:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.entrance-slide-up:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.entrance-slide-up:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.entrance-scale:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.entrance-scale:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.entrance-scale:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.entrance-scale:nth-child(4) {
+  animation-delay: 0.7s;
+}

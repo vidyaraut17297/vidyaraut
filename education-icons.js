@@ -1,7 +1,0 @@
-// Education icons using simple SVGs for each degree type
-export const educationIcons = {
-  mtech: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#0071e3"/><path d="M8 24V10l8-4 8 4v14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 10l8 4 8-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-  bed: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#6e6e73"/><path d="M10 22v-6a2 2 0 012-2h8a2 2 0 012 2v6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 22h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>`,
-  msc: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#005bb5"/><circle cx="16" cy="16" r="8" fill="#fff"/><path d="M16 12v8M12 16h8" stroke="#005bb5" stroke-width="2" stroke-linecap="round"/></svg>`,
-  bsc: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="#f5b700"/><circle cx="16" cy="16" r="8" fill="#fff"/><path d="M12 20l8-8M20 20l-8-8" stroke="#f5b700" stroke-width="2" stroke-linecap="round"/></svg>`
-};

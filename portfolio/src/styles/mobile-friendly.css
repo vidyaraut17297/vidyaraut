@@ -1,0 +1,349 @@
+/* Image handling and path fixes */
+.heroImage {
+  width: 18.75rem; /* 300px */
+  height: 18.75rem; /* 300px */
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+  background-color: var(--color-background-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroImage img,
+.heroImage svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Fallback for when image fails to load */
+.heroImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-background-light);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
+
+/* Card improvements */
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-base);
+  transition:
+    transform var(--transition-slow) ease-out,
+    box-shadow var(--transition-slow) ease-out;
+  position: relative;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on iOS */
+}
+
+.card--hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Enhanced touch targets for mobile */
+.navLink,
+.btn,
+.card {
+  touch-action: manipulation; /* Smooth touch interactions */
+}
+
+/* Improve form elements for mobile */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  margin-bottom: var(--space-xs);
+  -webkit-appearance: none; /* Remove default styles on iOS */
+  appearance: none; /* Standard property for compatibility */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .navList {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: flex;
+  }
+
+  .navInner {
+    padding: 0 var(--space-md);
+  }
+
+  .navContainer {
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .heroImage {
+    width: 15.625rem; /* 250px */
+    height: 15.625rem; /* 250px */
+  }
+
+  .mobileNavList {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-text-primary);
+    padding: var(--space-lg) var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-slow);
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .mobileNavList.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Improve card layouts for mobile */
+  .education-cards,
+  .experience-cards,
+  .skills-card-grid,
+  .projects-card-grid,
+  .cert-card-grid,
+  .contact-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-card,
+  .exp-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .edu-icon {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .mainTitle {
+    font-size: var(--font-size-2xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .heroImage {
+    width: 12.5rem; /* 200px */
+    height: 12.5rem; /* 200px */
+  }
+
+  .textContent {
+    text-align: center;
+  }
+
+  .edu-card,
+  .exp-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
+
+/* iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+  /* iOS specific styles */
+  .navLink {
+    -webkit-tap-highlight-color: rgba(0, 113, 227, 0.2);
+  }
+
+  .btn {
+    -webkit-tap-highlight-color: rgba(0, 113, 227, 0.3);
+  }
+
+  .card {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Improve accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .navLink,
+  .btn,
+  .heroImage {
+    transition: none;
+  }
+
+  .heroImage {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 1px solid var(--color-text-primary);
+  }
+
+  .navLink {
+    text-decoration: underline;
+  }
+}
+
+/* Focus styles for better accessibility */
+.card:focus,
+.navLink:focus,
+.btn:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Improve scroll behavior */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Better font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ensure content is not cut off on devices with notches */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .header {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* Prevent zoom on input focus on iOS */
+@media screen and (max-width: 767px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Improve tap targets for mobile */
+button,
+.btn,
+.navLink,
+.card,
+.contact-row a,
+.contact-row span {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Better mobile scrolling */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Improve mobile performance */
+@media (max-width: 768px) {
+  * {
+    /* Reduce motion for better performance on mobile */
+    animation-duration: 0.3s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.3s !important;
+  }
+
+  /* Disable hover effects on touch devices */
+  .card:hover,
+  .btn:hover,
+  .navLink:hover {
+    transform: none;
+  }
+}
+
+/* Ensure proper viewport handling */
+html {
+  /* Prevent zoom on form focus */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Better mobile form handling */
+.contact-form input,
+.contact-form textarea {
+  /* Ensure proper touch targets */
+  min-height: 44px;
+  /* Better mobile keyboard */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Improve mobile navigation accessibility */
+.mobileNavList a {
+  display: block;
+  padding: 12px 16px;
+  min-height: 44px;
+  text-decoration: none;
+}
+
+/* Better mobile chatbot positioning */
+#chatbot-toggle {
+  /* Ensure it's above other elements */
+  z-index: 9999;
+}
+
+/* Mobile-specific adjustments for fixed elements */
+@media (max-width: 768px) {
+  #chatbot-toggle,
+  .themeToggle {
+    /* Adjust positioning to avoid conflicts */
+    bottom: 16px;
+  }
+
+  #chatbot-toggle {
+    bottom: 80px; /* Above theme toggle */
+  }
+}
