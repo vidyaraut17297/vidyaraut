@@ -1,4 +1,9 @@
 {
+  "version": 2,
+  "name": "vidya-raut-portfolio",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "outputDirectory": "dist",
   "functions": {
     "api/chat.js": {
       "runtime": "nodejs18.x",
