@@ -76,47 +76,27 @@ export default async function handler(req, res) {
   }
 
   try {
-    // For Vercel, read the raw body if not already parsed
-    let body;
-    if (req.body) {
-      body = req.body;
-    } else {
-      // Read raw body
-      const chunks = [];
-      for await (const chunk of req) {
-        chunks.push(chunk);
-      }
-      const rawBody = Buffer.concat(chunks).toString();
-      try {
-        body = JSON.parse(rawBody);
-      } catch (parseError) {
-        console.log('JSON parse error:', parseError);
-        return res.status(400).json({ error: 'Invalid JSON body' });
-      }
+    // Vercel doesn't parse JSON bodies automatically - read raw body
+    const chunks = [];
+    for await (const chunk of req) {
+      chunks.push(chunk);
     }
+    const rawBody = Buffer.concat(chunks).toString();
 
-    console.log('Final body object:', JSON.stringify(body));
-    console.log('Body keys:', Object.keys(body || {}));
+    let body;
+    try {
+      body = JSON.parse(rawBody);
+    } catch (parseError) {
+      console.log('JSON parse error:', parseError);
+      return res.status(400).json({ error: 'Invalid JSON body' });
+    }
 
     const { message, context } = body || {};
 
-    console.log('Extracted message:', message);
-    console.log('Extracted context:', context);
-
     // Validate message
     const trimmedMessage = message?.toString().trim();
-    console.log('Trimmed message:', trimmedMessage);
-
     if (!trimmedMessage) {
-      return res.status(400).json({
-        error: 'Message is required',
-        debug: {
-          bodyType: typeof body,
-          bodyKeys: Object.keys(body || {}),
-          receivedMessage: message,
-          bodyString: JSON.stringify(body)
-        }
-      });
+      return res.status(400).json({ error: 'Message is required' });
     }
 
     // Prepare the context for the AI
