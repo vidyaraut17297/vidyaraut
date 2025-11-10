@@ -76,38 +76,24 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Handle Vercel's body parsing issue
-    let body;
+    // Simple body parsing for Vercel
+    let body = req.body;
 
-    // Check if body is already parsed as object
-    if (req.body && typeof req.body === 'object') {
-      // Vercel may parse it as form data - try to extract JSON string
-      const keys = Object.keys(req.body);
-      if (keys.length === 1 && keys[0].startsWith('{"')) {
-        // Body was parsed as form data with JSON as key
+    // If body is not parsed, try to parse it
+    if (!body || typeof body !== 'object') {
+      // For Vercel, sometimes body comes as a string
+      if (typeof req.body === 'string') {
         try {
-          body = JSON.parse(keys[0]);
+          body = JSON.parse(req.body);
         } catch (e) {
           return res.status(400).json({ error: 'Invalid JSON body' });
         }
       } else {
-        body = req.body;
-      }
-    } else {
-      // Try to read raw body
-      const chunks = [];
-      for await (const chunk of req) {
-        chunks.push(chunk);
-      }
-      const rawBody = Buffer.concat(chunks).toString();
-      try {
-        body = JSON.parse(rawBody);
-      } catch (parseError) {
-        return res.status(400).json({ error: 'Invalid JSON body' });
+        return res.status(400).json({ error: 'Invalid request body' });
       }
     }
 
-    const { message, context } = body || {};
+    const { message, context } = body;
 
     // Validate message
     const trimmedMessage = message?.toString().trim();
