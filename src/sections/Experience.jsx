@@ -29,7 +29,7 @@ const ExperienceSection = () => {
                 <div className="exp-duration-badge">
                   <span className="exp-duration">{exp.duration}</span>
                 </div>
-                <div className="exp-card">
+                <Card variant="elevated" hover={true} className="exp-card">
                   <div className="exp-header">
                     <h3 className="exp-title">{exp.title}</h3>
                     <div className="exp-meta">
@@ -52,7 +52,7 @@ const ExperienceSection = () => {
                       <p className="exp-summary">{exp.description}</p>
                     )}
                   </div>
-                </div>
+                </Card>
               </div>
             </div>
           ))}

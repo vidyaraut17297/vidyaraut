@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        // GitHub Pages SPA redirect
+        // This script redirects all 404 requests to the index.html for client-side routing
+        (function() {
+            // Get the current path
+            var path = window.location.pathname;
+            
+            // If the current path is the root or contains 'vidyaraut', redirect to the main site
+            if (path === '/' || path.indexOf('/vidyaraut/') === 0) {
+                // For root path, redirect to index.html
+                window.location.replace('/vidyaraut/index.html');
+            } else {
+                // For any other path, redirect to the main site with the path
+                window.location.replace('/vidyaraut/index.html' + path);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+    <p>If you are not redirected automatically, <a href="/vidyaraut/index.html">click here</a>.</p>
+</body>
+</html>

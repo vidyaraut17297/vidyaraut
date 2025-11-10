@@ -10,7 +10,8 @@ export default defineConfig(({ mode }) => {
       return '/';
     }
     // If building for GitHub Pages, use subdirectory
-    if (process.env.GITHUB_PAGES === 'true' || mode === 'production' && process.env.NODE_ENV === 'production') {
+    if (process.env.GITHUB_PAGES === 'true' || process.env.VITE_GITHUB_PAGES === 'true' ||
+        (mode === 'production' && !process.env.VERCEL && !process.env.VERCEL_URL)) {
       return '/vidyaraut/';
     }
     // Default to root for local development

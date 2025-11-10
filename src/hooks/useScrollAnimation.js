@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-const useScrollAnimation = (options = {}) => {
+const useScrollAnimation = (_options = {}) => {
   const elementRef = useRef(null);
 
   // Simplified hook that just returns a ref without animations

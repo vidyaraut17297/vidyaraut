@@ -130,7 +130,6 @@
   .education-cards,
   .experience-cards,
   .skills-card-grid,
-  .projects-card-grid,
   .cert-card-grid,
   .contact-card-grid {
     grid-template-columns: 1fr;

@@ -16,6 +16,17 @@
   --color-white: #ffffff;
   --color-black: #000000;
 
+  /* Card-specific colors for unified theming */
+  --color-card-background: var(--color-white);
+  --color-card-text: var(--color-text-primary);
+  --color-card-text-secondary: var(--color-text-secondary);
+  --color-card-heading: var(--color-primary-dark);
+  --color-card-flat-background: var(--color-background-light);
+  --color-card-hover-background: var(--color-white);
+  --color-tag-background: var(--color-background-light);
+  --color-tag-text: var(--color-primary-dark);
+  --color-card-border: var(--color-border);
+
   /* Spacing System */
   --space-xs: 0.5rem; /* 8px */
   --space-sm: 0.75rem; /* 12px */

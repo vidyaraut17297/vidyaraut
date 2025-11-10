@@ -1,0 +1,298 @@
+/* UNIFIED CARD SYSTEM - Clean, Theme-Aware, No Duplicates */
+
+/* Base Card Variables */
+.card {
+  /* Layout & Structure */
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-2xl);
+  transition: all var(--transition-slow) ease-out;
+  
+  /* Shadow System - Subtle, elegant */
+  box-shadow: var(--shadow-base);
+  
+  /* Border System - RED borders for clear visibility */
+  border: 1px solid #fca5a5;
+  
+  /* Background - Uses CSS variables for theme support */
+  background: var(--color-card-background, var(--color-white));
+  
+  /* Text Colors - Inherit from theme */
+  color: var(--color-card-text, var(--color-text-primary));
+}
+
+/* Enhanced hover effects with proper transforms */
+.card--hover:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-lg);
+  border-color: #fca5a5;
+}
+
+/* Card Variants */
+.card--outlined {
+  border: 2px solid #fca5a5;
+  box-shadow: none;
+  background: var(--color-card-background, var(--color-background-light));
+}
+
+.card--outlined.card--hover:hover {
+  box-shadow: var(--shadow-base);
+  transform: translateY(-2px) scale(1.005);
+  border-color: #fca5a5; /* Red on hover for outlined variant */
+}
+
+.card--elevated {
+  box-shadow: var(--shadow-md);
+  border: 1px solid #fca5a5;
+}
+
+.card--elevated.card--hover:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-6px) scale(1.01);
+  border-color: #fca5a5; /* Red border on hover */
+}
+
+.card--flat {
+  box-shadow: none;
+  background: var(--color-card-flat-background, var(--color-background-light));
+  border: 1px solid #fca5a5;
+}
+
+.card--flat.card--hover:hover {
+  background: var(--color-card-hover-background, var(--color-white));
+  box-shadow: var(--shadow-base);
+  transform: translateY(-2px);
+  border-color: #fca5a5; /* Red border on hover */
+}
+
+/* Card Type Specific Layouts */
+.edu-card,
+.exp-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xl);
+  text-align: left;
+  min-height: 160px;
+}
+
+.skills-card,
+.projects-card,
+.cert-card,
+.contact-card,
+.about-card {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Enhanced table styling */
+.skills-table,
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-md);
+}
+
+.skills-table td,
+.projects-table td {
+  padding: var(--space-md) var(--space-lg);
+  color: var(--color-card-text-secondary, var(--color-text-secondary));
+  font-size: var(--font-size-base);
+  border-bottom: 1px solid #fca5a5;
+  text-align: left;
+}
+
+.skills-table tr:last-child td,
+.projects-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Project tags styling */
+.project-tags {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+.project-tags span {
+  background: var(--color-tag-background, var(--color-background-light));
+  color: var(--color-tag-text, var(--color-primary-dark));
+  border-radius: var(--radius-full);
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Section-specific enhancements */
+.skills-card h3,
+.projects-card h3,
+.cert-card h3,
+.contact-card h3 {
+  margin-bottom: var(--space-lg);
+  color: var(--color-card-heading, var(--color-primary-dark));
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Education and Experience Icon Styling */
+.edu-icon {
+  flex-shrink: 0;
+  margin-top: 4px;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: transparent;
+}
+
+/* ========================================================================
+   THEME SYSTEM - CSS Custom Properties Approach
+   ======================================================================== */
+
+/* Light Theme (Default) */
+:root {
+  /* Card-specific color variables for light theme */
+  --color-card-background: var(--color-white);
+  --color-card-text: var(--color-text-primary);
+  --color-card-text-secondary: var(--color-text-secondary);
+  --color-card-heading: var(--color-primary-dark);
+  --color-card-flat-background: var(--color-background-light);
+  --color-card-hover-background: var(--color-white);
+  --color-tag-background: var(--color-background-light);
+  --color-tag-text: var(--color-primary-dark);
+  --color-card-border: var(--color-border);
+}
+
+/* Dark Theme */
+.dark-theme {
+  /* Card-specific color variables for dark theme */
+  --color-card-background: #1c1c1e;
+  --color-card-text: #ffffff;
+  --color-card-text-secondary: rgba(255, 255, 255, 0.9);
+  --color-card-heading: #0a84ff;
+  --color-card-flat-background: #1c1c1e;
+  --color-card-hover-background: #2c2c2e;
+  --color-tag-background: #2c2c2e;
+  --color-tag-text: #0a84ff;
+  --color-card-border: #f87171;
+  
+  /* Override shadows for dark theme */
+  --shadow-base: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 35px rgba(0, 122, 255, 0.15);
+  --shadow-xl: 0 20px 50px rgba(0, 122, 255, 0.2);
+}
+
+/* Dark theme specific enhancements */
+.dark-theme .card {
+  border: 2px solid var(--color-card-border);
+}
+
+.dark-theme .card--hover:hover {
+  box-shadow: 
+    0 8px 32px rgba(0, 122, 255, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.dark-theme .edu-card::before,
+.dark-theme .exp-card::before,
+.dark-theme .skills-card::before,
+.dark-theme .projects-card::before,
+.dark-theme .cert-card::before,
+.dark-theme .contact-card::before,
+.dark-theme .about-card::before {
+  background: linear-gradient(90deg, var(--color-primary), #64d2ff);
+}
+
+/* ========================================================================
+   RESPONSIVE DESIGN
+   ======================================================================== */
+
+@media (max-width: 1024px) {
+  .card {
+    padding: var(--space-xl);
+  }
+
+  .edu-card,
+  .exp-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--space-lg);
+    transform: none !important;
+    box-shadow: var(--shadow-base);
+  }
+
+  .card--hover:hover {
+    transform: none !important;
+  }
+
+  .edu-card,
+  .exp-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .edu-icon {
+    align-self: center;
+    margin-top: 0;
+  }
+
+  .skills-card,
+  .projects-card,
+  .cert-card,
+  .contact-card,
+  .about-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--space-md);
+  }
+
+  .edu-card,
+  .exp-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .edu-icon {
+    align-self: center;
+    margin-top: 0;
+  }
+}
+
+/* ========================================================================
+   ANIMATIONS
+   ======================================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Entrance animation for cards */
+.entrance-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}

@@ -1,0 +1,5 @@
+# GitHub Pages SPA routing support
+# This file redirects all routes to index.html for client-side routing
+
+# For GitHub Pages subdirectory deployment
+/*    /vidyaraut/index.html   200

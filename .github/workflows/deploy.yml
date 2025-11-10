@@ -48,11 +48,24 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: true
+          VITE_GITHUB_PAGES: true
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_SITE_URL: https://vidyaraut17297.github.io/vidyaraut
           OPENROUTER_APP_TITLE: Vidya Raut Portfolio
           NODE_ENV: production
           VITE_OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CI: false
+          GENERATE_SOURCEMAP: false
+
+      - name: Verify build output
+        run: |
+          echo "Verifying build output..."
+          ls -la dist/
+          echo "Checking if base path is correct in index.html:"
+          grep -o 'href="[^"]*"' dist/index.html | head -5
+          echo "Checking for _redirects and 404.html in public folder:"
+          ls -la dist/ | grep -E "(404|_redirects)" || echo "No redirect files found in dist"
+          echo "Build verification completed."
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
