@@ -47,6 +47,7 @@ jobs:
       - name: Build for production
         run: npm run build
         env:
+          GITHUB_PAGES: true
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_SITE_URL: https://vidyaraut17297.github.io/vidyaraut
           OPENROUTER_APP_TITLE: Vidya Raut Portfolio
