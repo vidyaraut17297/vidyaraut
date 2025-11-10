@@ -76,19 +76,35 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Vercel doesn't parse JSON bodies automatically - read raw body
-    const chunks = [];
-    for await (const chunk of req) {
-      chunks.push(chunk);
-    }
-    const rawBody = Buffer.concat(chunks).toString();
-
+    // Handle Vercel's body parsing issue
     let body;
-    try {
-      body = JSON.parse(rawBody);
-    } catch (parseError) {
-      console.log('JSON parse error:', parseError);
-      return res.status(400).json({ error: 'Invalid JSON body' });
+
+    // Check if body is already parsed as object
+    if (req.body && typeof req.body === 'object') {
+      // Vercel may parse it as form data - try to extract JSON string
+      const keys = Object.keys(req.body);
+      if (keys.length === 1 && keys[0].startsWith('{"')) {
+        // Body was parsed as form data with JSON as key
+        try {
+          body = JSON.parse(keys[0]);
+        } catch (e) {
+          return res.status(400).json({ error: 'Invalid JSON body' });
+        }
+      } else {
+        body = req.body;
+      }
+    } else {
+      // Try to read raw body
+      const chunks = [];
+      for await (const chunk of req) {
+        chunks.push(chunk);
+      }
+      const rawBody = Buffer.concat(chunks).toString();
+      try {
+        body = JSON.parse(rawBody);
+      } catch (parseError) {
+        return res.status(400).json({ error: 'Invalid JSON body' });
+      }
     }
 
     const { message, context } = body || {};
