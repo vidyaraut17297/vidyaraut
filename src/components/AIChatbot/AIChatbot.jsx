@@ -85,7 +85,6 @@ const AIChatbot = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: 'test', context: {} }),
-        targetAddressSpace: 'private',
       });
 
       let aiStatus = 'offline';
@@ -250,7 +249,7 @@ const AIChatbot = () => {
           message: inputValue.trim(),
           context: portfolioContext,
         }),
-        targetAddressSpace: 'private',
+        targetAddressSpace: 'public',
       });
 
       if (!response.ok) {
