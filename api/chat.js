@@ -76,20 +76,38 @@ export default async function handler(req, res) {
   }
 
   try {
+    // Debug: Log request details
+    console.log('Request method:', req.method);
+    console.log('Content-Type:', req.headers['content-type']);
+    console.log('Raw body type:', typeof req.body);
+    console.log('Raw body:', req.body);
+
     // Ensure body is parsed
     let body;
     if (typeof req.body === 'string') {
-      body = JSON.parse(req.body);
+      try {
+        body = JSON.parse(req.body);
+      } catch (parseError) {
+        console.log('JSON parse error:', parseError);
+        return res.status(400).json({ error: 'Invalid JSON body' });
+      }
     } else {
       body = req.body;
     }
 
+    console.log('Parsed body:', body);
+
     const { message, context } = body || {};
+
+    console.log('Message:', message);
+    console.log('Context:', context);
 
     // Validate message
     const trimmedMessage = message?.toString().trim();
+    console.log('Trimmed message:', trimmedMessage);
+
     if (!trimmedMessage) {
-      return res.status(400).json({ error: 'Message is required' });
+      return res.status(400).json({ error: 'Message is required', debug: { receivedMessage: message, bodyType: typeof req.body } });
     }
 
     // Prepare the context for the AI
