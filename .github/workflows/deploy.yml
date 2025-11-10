@@ -44,18 +44,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build for production
-        run: npm run build
+      - name: Build for GitHub Pages
+        run: npm run build:github
         env:
-          GITHUB_PAGES: true
-          VITE_GITHUB_PAGES: true
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_SITE_URL: https://vidyaraut17297.github.io/vidyaraut
-          OPENROUTER_APP_TITLE: Vidya Raut Portfolio
-          NODE_ENV: production
-          VITE_OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           CI: false
-          GENERATE_SOURCEMAP: false
+          NODE_ENV: production
 
       - name: Verify build output
         run: |
