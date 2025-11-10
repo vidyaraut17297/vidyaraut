@@ -88,6 +88,7 @@ export default async function handler(req, res) {
     // Use working models based on testing
     const modelsToTry = [
       "minimax/minimax-m2:free",                  // MiniMax (primary - tested working)
+      "openrouter/polaris-alpha",                 // Polaris Alpha (user's preferred fallback)
       "qwen/qwen3-coder-480b-a35b-instruct:free" // Qwen3 Coder (second fallback)
     ];
 
