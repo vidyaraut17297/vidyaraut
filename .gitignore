@@ -9,6 +9,9 @@ backend/.env
 dist-ssr/
 *.local
 
+# Dist folder (generated builds)
+dist/
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
