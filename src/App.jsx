@@ -16,9 +16,8 @@ import AIChatbot from './components/AIChatbot/AIChatbot';
 
 import './styles/global.css';
 import './styles/animations.css';
-/* Removed card-layouts.css - using unified card system instead */
+/* Only essential CSS files - unified card system handles all styling */
 import './styles/mobile-friendly.css';
-import './styles/dark-mode-cards.css';
 
 function App() {
   return (
