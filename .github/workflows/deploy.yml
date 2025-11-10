@@ -50,10 +50,13 @@ jobs:
           NODE_ENV: production
           VITE_OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
+      - name: Copy dist to root
+        run: cp -r dist/* . && cp dist/.* . 2>/dev/null || true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: .
 
   # Deployment job
   deploy:
