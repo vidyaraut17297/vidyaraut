@@ -83,7 +83,7 @@
     transform var(--transition-slow) ease,
     box-shadow var(--transition-slow) ease,
     border-color var(--transition-base);
-  border: 2px solid #e5e5e5;
+  border: 2px solid var(--color-border);
   position: relative;
   overflow: hidden;
 }
@@ -107,7 +107,7 @@
 .exp-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(0, 122, 255, 0.2);
+  border-color: var(--color-border);
 }
 
 /* Experience Header */
@@ -263,7 +263,7 @@
     border-color var(--transition-base);
   min-height: 180px;
   text-align: left;
-  border: 2px solid #e5e5e5;
+  border: 2px solid var(--color-border);
   position: relative;
   overflow: hidden;
 }
@@ -287,7 +287,7 @@
 .edu-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(0, 122, 255, 0.2);
+  border-color: var(--color-border);
 }
 
 .edu-icon {
@@ -352,7 +352,7 @@
     transform var(--transition-slow) ease,
     box-shadow var(--transition-slow) ease,
     border-color var(--transition-base);
-  border: 2px solid #e5e5e5;
+  border: 2px solid var(--color-border);
   position: relative;
   overflow: hidden;
 }
@@ -376,7 +376,7 @@
 .skills-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(0, 122, 255, 0.2);
+  border-color: var(--color-border);
 }
 
 .skills-card h3 {
@@ -423,7 +423,7 @@
     transform var(--transition-slow) ease,
     box-shadow var(--transition-slow) ease,
     border-color var(--transition-base);
-  border: 2px solid #e5e5e5;
+  border: 2px solid var(--color-border);
   position: relative;
   overflow: hidden;
 }
@@ -447,7 +447,7 @@
 .projects-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(0, 122, 255, 0.2);
+  border-color: var(--color-border);
 }
 
 .projects-card h3 {
@@ -509,7 +509,7 @@
     transform var(--transition-slow) ease,
     box-shadow var(--transition-slow) ease,
     border-color var(--transition-base);
-  border: 2px solid #e5e5e5;
+  border: 2px solid var(--color-border);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -534,7 +534,7 @@
 .cert-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(0, 122, 255, 0.2);
+  border-color: var(--color-border);
 }
 
 .cert-icon {
@@ -582,7 +582,7 @@
     transform var(--transition-slow) ease,
     box-shadow var(--transition-slow) ease,
     border-color var(--transition-base);
-  border: 2px solid #e5e5e5;
+  border: 2px solid var(--color-border);
   position: relative;
   overflow: hidden;
 }
@@ -606,7 +606,7 @@
 .about-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(0, 122, 255, 0.2);
+  border-color: var(--color-border);
 }
 
 .about-card blockquote {
@@ -639,7 +639,7 @@
     transform var(--transition-slow) ease,
     box-shadow var(--transition-slow) ease,
     border-color var(--transition-base);
-  border: 2px solid #e5e5e5;
+  border: 2px solid var(--color-border);
   position: relative;
   overflow: hidden;
 }
@@ -663,7 +663,7 @@
 .contact-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(0, 122, 255, 0.2);
+  border-color: var(--color-border);
 }
 
 .contact-card h3 {
@@ -747,7 +747,7 @@
     transform var(--transition-slow) ease,
     box-shadow var(--transition-slow) ease,
     border-color var(--transition-base);
-  border: 2px solid #e5e5e5;
+  border: 2px solid var(--color-border);
   position: relative;
   overflow: hidden;
 }
@@ -771,7 +771,7 @@
 .energy-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(0, 122, 255, 0.2);
+  border-color: var(--color-border);
 }
 
 /* Alt background for alternating sections */
@@ -800,7 +800,7 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--color-border);
 }
 
 /* Responsive adjustments */

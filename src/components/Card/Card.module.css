@@ -6,20 +6,20 @@
   position: relative;
   overflow: hidden;
   padding: var(--space-2xl);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border);
   backdrop-filter: blur(10px);
 }
 
 /* Light theme card */
 :root:not(.dark-theme) .card {
   background: var(--color-white);
-  border-color: rgba(0, 0, 0, 0.05);
+  border-color: var(--color-border);
 }
 
-/* Dark theme card - black background with white text and border */
+/* Dark theme card - black background with white text and grey border */
 .dark-theme .card {
   background: #000000; /* Black background */
-  border-color: rgba(255, 255, 255, 0.3); /* White/light border */
+  border-color: var(--color-border); /* Grey border */
   color: #ffffff; /* White text */
 }
 
@@ -41,7 +41,7 @@
 .card--hover:hover {
   transform: translateY(-8px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--color-border);
 }
 
 .card--outlined {

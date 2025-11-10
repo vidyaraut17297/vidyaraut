@@ -402,7 +402,7 @@ const AIChatbot = () => {
             flexDirection: 'column',
             overflow: 'hidden',
             animation: 'slideUp 0.3s ease',
-            border: '1px solid rgba(0, 0, 0, 0.1)',
+            border: '1px solid var(--color-border)',
           }}
         >
           {/* Header */}
@@ -810,7 +810,7 @@ const AIChatbot = () => {
                 flex: 1,
                 padding: '12px 16px',
                 borderRadius: '24px',
-                border: '1px solid #d1d1d6',
+                border: '1px solid var(--color-border)',
                 outline: 'none',
                 fontSize: '14px',
                 background: '#f8f9fa',

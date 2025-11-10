@@ -40,21 +40,21 @@ html.dark .exp-card {
 }
 
 html.dark .exp-card:hover {
-  border-color: rgba(0, 122, 255, 0.4) !important;
+  border-color: var(--color-border) !important;
 }
 
 html.dark .experience-footer {
-  border: 2px solid #404040 !important;
+  border: 2px solid var(--color-border) !important;
   background: rgba(0, 122, 255, 0.05) !important;
 }
 
 html.dark .metric {
-  border: 1px solid #404040 !important;
+  border: 1px solid var(--color-border) !important;
   background: #1c1c1e !important;
 }
 
 html.dark .metric:hover {
-  border-color: rgba(0, 122, 255, 0.4) !important;
+  border-color: var(--color-border) !important;
   background: rgba(0, 122, 255, 0.08) !important;
 }
 
@@ -120,12 +120,12 @@ html.dark a:hover {
   color: #64d2ff !important;
 }
 
-/* HOVER EFFECTS - Subtle Blue Glow */
+/* HOVER EFFECTS - Grey Border */
 html.dark .card:hover,
 html.dark .education-card:hover,
 html.dark .experience-card:hover,
 html.dark .project-card:hover {
-  border-color: rgba(0, 122, 255, 0.3) !important;
+  border-color: var(--color-border) !important;
   box-shadow:
     0 8px 32px rgba(0, 122, 255, 0.15),
     0 0 0 1px rgba(0, 122, 255, 0.2) !important;

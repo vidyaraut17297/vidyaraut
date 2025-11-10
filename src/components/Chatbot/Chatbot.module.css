@@ -86,7 +86,7 @@
   flex-direction: column;
   z-index: 9998;
   animation: slideUp 0.3s ease;
-  border: 1px solid #e1e5e9;
+  border: 1px solid var(--color-border);
   overflow: hidden;
 }
 
@@ -278,7 +278,7 @@
   align-items: center;
   gap: 8px;
   padding: 12px;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   background: white;
   cursor: pointer;
@@ -310,7 +310,7 @@
 .chatbot-input-area input {
   flex: 1;
   padding: 12px 16px;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--color-border);
   border-radius: 24px;
   font-size: 14px;
   outline: none;
