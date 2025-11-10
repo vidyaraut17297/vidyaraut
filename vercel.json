@@ -1,22 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm run build:vercel",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "regions": ["iad1"],
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20.x",
-      "memory": 1024,
-      "maxDuration": 15
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/api/(.*)",
@@ -31,7 +16,15 @@
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization"
+          "value": "Content-Type, Authorization, Origin, X-Requested-With, Accept"
+        },
+        {
+          "key": "Access-Control-Allow-Credentials",
+          "value": "false"
+        },
+        {
+          "key": "Access-Control-Max-Age",
+          "value": "86400"
         }
       ]
     }
