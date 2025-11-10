@@ -85,10 +85,10 @@ export default async function handler(req, res) {
     // Prepare the context for the AI
     const contextStr = JSON.stringify(portfolioContext);
 
-    // Use only the 3 specified models
+    // Use working models based on testing
     const modelsToTry = [
-      "google/gemini-2.0-flash-exp:free",        // Google Gemini 2.0 (primary)
-      "openrouter/auto",                         // Polaris Alpha (fallback)
+      "minimax/minimax-m2:free",                  // MiniMax (primary - tested working)
+      "google/gemini-2.0-flash-exp:free",        // Google Gemini 2.0 (fallback)
       "qwen/qwen3-coder-480b-a35b-instruct:free" // Qwen3 Coder (second fallback)
     ];
 
