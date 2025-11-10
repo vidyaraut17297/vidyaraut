@@ -2,10 +2,10 @@
   "version": 2,
   "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist",
-  "framework": null,
+  "framework": "vite",
   "functions": {
     "api/**/*.js": {
-      "runtime": "@vercel/node"
+      "runtime": "nodejs20.x"
     }
   },
   "rewrites": [
