@@ -75,11 +75,11 @@ const AIChatbot = () => {
       }));
 
       // Check backend health
-      const healthResponse = await fetch(`${API_BASE_URL}/api/health`);
+      const healthResponse = await fetch(`${API_BASE_URL}/health`);
       const backendStatus = healthResponse.ok ? 'online' : 'offline';
 
       // Check AI status by making a test request
-      const testResponse = await fetch(`${API_BASE_URL}/api/chat`, {
+      const testResponse = await fetch(`${API_BASE_URL}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: 'test', context: {} }),
@@ -238,7 +238,7 @@ const AIChatbot = () => {
 
     try {
       // Call backend API to get AI response with proper JSON formatting
-      const response = await fetch(`${API_BASE_URL}/api/chat`, {
+      const response = await fetch(`${API_BASE_URL}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

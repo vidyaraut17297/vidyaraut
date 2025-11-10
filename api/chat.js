@@ -151,7 +151,7 @@ export default async function handler(req, res) {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
             'HTTP-Referer': process.env.VERCEL_URL || 'https://vidyaraut.vercel.app',
-            'X-Title': 'Vidya Raut Portfolio AI Assistant',
+            'X-Title': 'Vidya Raut Portfolio',
             'User-Agent': 'Vidya-Raut-Portfolio/1.0'
           },
           body: JSON.stringify({
