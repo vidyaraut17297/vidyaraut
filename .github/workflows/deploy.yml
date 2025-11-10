@@ -30,9 +30,11 @@ jobs:
 
     - name: Deploy to GitHub Pages 🚀
       uses: peaceiris/actions-gh-pages@v4
-      if: github.ref == 'refs/heads/main'
+      if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
         publish_branch: gh-pages
         destination_dir: ./
+        keep_files: false
+        allow_empty_commit: false
