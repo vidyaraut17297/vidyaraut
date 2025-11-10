@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navigation.module.css';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
-import logoImg from '/logo.png';
+import logoImg from '/vidyaraut/logo.png';
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');

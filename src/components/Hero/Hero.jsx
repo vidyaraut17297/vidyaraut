@@ -1,7 +1,7 @@
 import React from 'react';
 import { heroContent } from '../../utils/constants';
 import styles from './Hero.module.css';
-import heroImg from '/home picture.jpeg';
+import heroImg from '/vidyaraut/home picture.jpeg';
 
 const Hero = () => {
   return (
@@ -39,7 +39,7 @@ const Hero = () => {
           <p className={styles.subtitle}>{heroContent.title}</p>
           <p className={styles.location}>{heroContent.location}</p>
           <a
-            href="/Vidya Raut Resume.docx"
+            href="/vidyaraut/Vidya Raut Resume.docx"
             className={`${styles.resumeBtn} btn`}
             style={{ marginTop: '1.5rem', display: 'inline-block' }}
             download
