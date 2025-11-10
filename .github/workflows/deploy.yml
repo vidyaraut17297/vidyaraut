@@ -1,80 +1,37 @@
-# Workflow for deploying Vidya Raut portfolio to GitHub Pages
 name: Deploy to GitHub Pages
 
 on:
-  # Runs on pushes to main branch
   push:
-    branches: ["main"]
-  
-  # Allows manual deployment from Actions tab
-  workflow_dispatch:
-  
-  # Runs when pull requests are made to main
+    branches: [ main, master ]
   pull_request:
-    branches: ["main"]
-
-# Sets permissions for GitHub Pages deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Ensure only one deployment runs at a time
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    branches: [ main, master ]
 
 jobs:
-  # Build and deploy job
   build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout 🛎️
+      uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
+    - name: Setup Node.js 📦
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+    - name: Install dependencies 📦
+      run: npm ci
 
-      - name: Build for production
-        run: npm run build
-        env:
-          GITHUB_PAGES: true
-          VITE_GITHUB_PAGES: true
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_SITE_URL: https://vidyaraut17297.github.io/vidyaraut
-          OPENROUTER_APP_TITLE: Vidya Raut Portfolio
-          NODE_ENV: production
-          VITE_OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          CI: false
-          GENERATE_SOURCEMAP: false
+    - name: Build for GitHub Pages 🏗️
+      run: npm run build:github
+      env:
+        VITE_BASE_URL: /vidyaraut/
 
-      - name: Verify build output
-        run: |
-          echo "Verifying build output..."
-          ls -la dist/
-          echo "Checking if base path is correct in index.html:"
-          grep -o 'href="[^"]*"' dist/index.html | head -5
-          echo "Checking for _redirects and 404.html in public folder:"
-          ls -la dist/ | grep -E "(404|_redirects)" || echo "No redirect files found in dist"
-          echo "Build verification completed."
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload build artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: Deploy to GitHub Pages 🚀
+      uses: peaceiris/actions-gh-pages@v4
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        cname: vidyaraut.github.io

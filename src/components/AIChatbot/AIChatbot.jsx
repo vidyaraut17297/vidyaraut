@@ -793,7 +793,7 @@ const AIChatbot = () => {
               height: '80px',
               padding: '20px',
               background: 'white',
-              borderTop: '1px solid #e5e5e7',
+              borderTop: '1px solid var(--color-border)',
               display: 'flex',
               gap: '12px',
               alignItems: 'center',

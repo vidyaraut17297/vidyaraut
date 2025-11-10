@@ -18,6 +18,7 @@ import './styles/global.css';
 import './styles/animations.css';
 /* Only essential CSS files - unified card system handles all styling */
 import './styles/mobile-friendly.css';
+/* RED BORDER SYSTEM: All card borders are now #ef4444 (red) - no grey borders remain */
 
 function App() {
   return (

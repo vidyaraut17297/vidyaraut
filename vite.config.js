@@ -3,24 +3,9 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Dynamic base path based on environment
-  const getBasePath = () => {
-    // If VERCEL environment variable is set, use root path (for Vercel)
-    if (process.env.VERCEL) {
-      return '/';
-    }
-    // If building for GitHub Pages, use subdirectory
-    if (process.env.GITHUB_PAGES === 'true' || process.env.VITE_GITHUB_PAGES === 'true' ||
-        (mode === 'production' && !process.env.VERCEL && !process.env.VERCEL_URL)) {
-      return '/vidyaraut/';
-    }
-    // Default to root for local development
-    return '/';
-  };
-
   return {
     plugins: [react()],
-    base: getBasePath(),
+    base: process.env.VITE_BASE_URL || '/',
     resolve: {
       alias: {
         '@': '/src',
@@ -38,8 +23,13 @@ export default defineConfig(({ mode }) => {
       sourcemap: true,
       rollupOptions: {
         output: {
-          manualChunks: {
-            vendor: ['react', 'react-dom']
+          manualChunks: (id) => {
+            if (id.includes('node_modules')) {
+              if (id.includes('react') || id.includes('react-dom')) {
+                return 'react-vendor';
+              }
+              return 'vendor';
+            }
           }
         }
       }
@@ -54,7 +44,7 @@ export default defineConfig(({ mode }) => {
       port: 3000,
       proxy: {
         '/api': {
-          target: 'http://localhost:5000',
+          target: 'http://localhost:5001',
           changeOrigin: true,
           secure: false
         }

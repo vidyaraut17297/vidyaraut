@@ -23,12 +23,12 @@ const FunCrosswordSection = () => {
               title="Marathi Crossword Game"
               width="100%"
               height="420"
-              style={{
-                borderRadius: '1rem',
-                border: '2px solid var(--color-border)',
-                background: '#fff',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-              }}
+            style={{
+              borderRadius: '1rem',
+              border: '2px solid #ef4444',
+              background: '#fff',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+            }}
               loading="lazy"
             ></iframe>
           </Card>

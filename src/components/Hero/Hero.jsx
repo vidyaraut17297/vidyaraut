@@ -1,6 +1,7 @@
 import React from 'react';
 import { heroContent } from '../../utils/constants';
 import styles from './Hero.module.css';
+import heroImg from '/home picture.jpeg';
 
 const Hero = () => {
   return (
@@ -11,7 +12,7 @@ const Hero = () => {
       <div className={`${styles.heroContent} container`}>
         <div className={styles.heroImage}>
           <img
-            src={import.meta.env.BASE_URL + 'home picture.jpeg'}
+            src={heroImg}
             alt="Vidya Raut portrait"
             loading="eager"
             onError={e => {

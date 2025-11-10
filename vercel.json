@@ -1,7 +1,19 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist",
+  "framework": null,
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
@@ -16,15 +28,7 @@
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization, Origin, X-Requested-With, Accept"
-        },
-        {
-          "key": "Access-Control-Allow-Credentials",
-          "value": "false"
-        },
-        {
-          "key": "Access-Control-Max-Age",
-          "value": "86400"
+          "value": "Content-Type, Authorization"
         }
       ]
     }

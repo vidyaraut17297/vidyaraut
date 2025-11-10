@@ -1,133 +1,133 @@
-# 🚀 Vidya Raut - Portfolio
+# Vidya Raut Portfolio
 
-[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-[![Node.js](https://img.shields.io/badge/Node.js-16+-339933?style=for-the-badge&logo=node.js)](https://nodejs.org/)
-[![Express](https://img.shields.io/badge/Express-4.18.2-000000?style=for-the-badge&logo=express)](https://expressjs.com/)
-[![OpenRouter](https://img.shields.io/badge/OpenRouter-AI-FF6B35?style=for-the-badge)](https://openrouter.ai/)
+A modern, responsive portfolio website built with React, Vite, and Node.js backend.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-FF6B35?style=for-the-badge&logo=firefox)](https://vidyaraut17297.github.io/vidyaraut/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-222222?style=for-the-badge&logo=github)](https://vidyaraut17297.github.io/vidyaraut/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/vidyaraut17)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/vidyaraut17297)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:vidyaraut17297@gmail.com)
+## 🚀 Features
 
-> **M.Tech in Energy Technology | Market Analyst | Energy Storage & Power Markets**  
-> *Physics (MSc) | B.Ed (Science & Maths) | 2+ Years Energy Sector Experience*
-
-A modern, responsive portfolio website showcasing professional expertise in energy markets, battery R&D, and data analysis. Features an AI-powered chatbot and Apple-inspired design aesthetics.
-
-## ✨ Features
-
-### 🎨 **Modern UI/UX**
-- **Apple-Inspired Design**: Clean, minimalist interface with smooth transitions
-- **Responsive Design**: Mobile-first approach supporting all device sizes
-- **Dark/Light Mode Ready**: CSS Variables for easy theme switching
-- **Accessibility First**: WCAG compliant with semantic HTML and ARIA attributes
-
-### 🤖 **AI-Powered Chatbot**
-- **OpenRouter Integration**: Multiple AI models with intelligent fallbacks
-- **Real-time Responses**: Live AI conversations about expertise and general topics
-- **Smart Pattern Matching**: Intelligent responses when AI is unavailable
-- **System Status Monitoring**: Live backend and AI service status indicators
-- **Rate Limiting**: Built-in protection against abuse
-
-### 📊 **Portfolio Sections**
-- **🏠 About**: Professional summary and value proposition
-- **💼 Experience**: 2+ years in energy sector (Customized Energy Solutions)
-- **🎓 Education**: M.Tech (in progress), B.Ed, MSc Physics, BSc Physics
-- **🔬 Projects**: Battery R&D and physics research projects
-- **📜 Certifications**: MS-CIT, NCC Cadet, MHMEE-2020 Conference
-- **⚡ Skills**: Excel (Advanced), Battery Management, Laboratory Safety
-- **🌱 Energy Insights**: Market analysis and industry expertise
-- **🎯 Fun Crossword**: Interactive puzzle showcasing technical knowledge
-
-### ⚡ **Performance & Technical**
-- **Lightning Fast**: Vite-powered build with code splitting and tree-shaking
-- **Optimized Bundle**: Efficient chunking and lazy loading
-- **SEO Ready**: Meta tags and structured data
-- **PWA Ready**: Service worker and manifest ready
+- **Responsive Design**: Works perfectly on all devices
+- **Dark/Light Theme Toggle**: Automatic theme switching
+- **AI Chat Integration**: Interactive chatbot powered by OpenRouter API
+- **Smooth Animations**: CSS animations and transitions
+- **SEO Optimized**: Meta tags and structured data
+- **Fast Performance**: Optimized bundles and lazy loading
 
 ## 🛠️ Tech Stack
 
-### **Frontend**
-```json
-{
-  "React": "18.2.0",
-  "Vite": "7.1.7",
-  "Lucide React": "0.553.0",
-  "CSS Modules": "Latest",
-  "ESLint": "9.39.1",
-  "Prettier": "3.6.2"
-}
+- **Frontend**: React 18, Vite, CSS Modules
+- **Backend**: Node.js, Express, Redis (optional)
+- **Deployment**: Vercel, GitHub Pages
+- **AI**: OpenRouter API integration
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/vidyaraut.git
+cd vidyaraut
 ```
 
-### **Backend**
-```json
-{
-  "Node.js": ">=16.0.0",
-  "Express": "4.18.2",
-  "OpenRouter AI": "Latest",
-  "Redis": "4.6.7",
-  "CORS": "2.8.5",
-  "Helmet": "7.0.0",
-  "Express Rate Limit": "7.0.0"
-}
+2. Install dependencies:
+```bash
+npm install
+cd backend && npm install && cd ..
 ```
 
-### **Deployment**
-- **🚀 Vercel**: Recommended for full-stack deployment
-- **📄 GitHub Pages**: Static frontend deployment option
-- **🔄 CI/CD**: Automated builds and deployments
+3. Create environment files:
+```bash
+# .env (root)
+VITE_BASE_URL=/
+
+# backend/.env
+OPENROUTER_API_KEY=your_api_key_here
+PORT=5001
+```
+
+4. Start development servers:
+```bash
+npm run dev:full  # Runs both frontend (port 3000) and backend (port 5001)
+```
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+```bash
+npm run build:vercel
+# Deploy to Vercel - connects automatically via vercel.json
+```
+
+### GitHub Pages
+```bash
+npm run build:github
+# Push to main branch - GitHub Actions deploys automatically
+```
+
+### Manual Deployment Script
+```bash
+./deploy.sh vercel    # Build for Vercel
+./deploy.sh github    # Build for GitHub Pages
+./deploy.sh both      # Build for both platforms
+```
 
 ## 📁 Project Structure
 
 ```
 vidyaraut/
-├── 📁 src/
-│   ├── 📁 components/          # Reusable UI components
-│   │   ├── AIChatbot/         # AI-powered chat widget
-│   │   ├── Card/              # Reusable card component
-│   │   ├── Hero/              # Landing section
-│   │   ├── Navigation/        # Responsive navbar
-│   │   └── ThemeToggle/       # Dark/light mode toggle
-│   ├── 📁 sections/           # Portfolio sections
-│   │   ├── About.jsx          # Professional summary
-│   │   ├── Experience.jsx     # Work experience
-│   │   ├── Education.jsx      # Academic background
-│   │   ├── Skills.jsx         # Technical skills
-│   │   ├── Projects.jsx       # Research projects
-│   │   ├── Certifications.jsx # Professional certs
-│   │   ├── EnergyInsights.jsx # Market analysis
-│   │   └── FunCrossword.jsx   # Interactive puzzle
-│   ├── 📁 styles/             # Global styles
-│   │   ├── variables.css      # CSS custom properties
-│   │   ├── global.css         # Reset & base styles
-│   │   ├── animations.css     # GSAP animations
-│   │   └── card-layouts.css   # Grid layouts
-│   ├── 📁 hooks/              # Custom React hooks
-│   ├── 📁 utils/              # Utilities & constants
-│   ├── 📁 data/               # Static content data
-│   ├── App.jsx               # Main app component
-│   └── main.jsx              # React entry point
-├── 📁 backend/               # Express.js API server
-│   ├── routes/chat.js        # AI chatbot endpoints
-│   ├── server.js             # Express server setup
-│   ├── .env                  # Backend environment vars
-│   └── package.json          # Backend dependencies
-├── 📁 public/                # Static assets
-├── 📁 api/                   # Vercel serverless functions
-├── package.json              # Frontend dependencies
-├── vite.config.js           # Vite configuration
-└── vercel.json              # Vercel deployment config
+├── src/                    # React frontend source
+│   ├── components/         # Reusable UI components
+│   ├── sections/          # Page sections
+│   ├── styles/            # CSS files and variables
+│   └── utils/             # Helper functions
+├── backend/               # Node.js backend
+│   ├── routes/           # API routes
+│   └── middleware/       # Custom middleware
+├── public/               # Static assets
+├── dist/                 # Build output (auto-generated)
+├── vercel.json          # Vercel deployment config
+└── .github/workflows/   # GitHub Actions
 ```
 
+## 🎨 Customization
 
+### Base URL Configuration
+Set `VITE_BASE_URL` in `.env`:
+- Local dev: `VITE_BASE_URL=/`
+- Vercel: `VITE_BASE_URL=/`
+- GitHub Pages: `VITE_BASE_URL=/vidyaraut/`
 
-## 📋 Prerequisites
+### Theme Colors
+Update `src/styles/variables.css` to customize colors.
 
-Before you begin, ensure you have the following installed:
+### Content
+Edit content in `src/utils/constants.js` and section components.
 
+## 🔧 Development Scripts
+
+```bash
+npm run dev          # Start frontend dev server
+npm run dev:full     # Start both frontend and backend
+npm run build        # Production build
+npm run build:vercel # Build for Vercel
+npm run build:github # Build for GitHub Pages
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+```
+
+## 🌐 Live Demo
+
+- **Vercel**: [https://vidyaraut.vercel.app](https://vidyaraut.vercel.app)
+- **GitHub Pages**: [https://vidyaraut17297.github.io/vidyaraut](https://vidyaraut17297.github.io/vidyaraut)
+
+## 📄 License
+
+MIT License - feel free to use this project for your own portfolio!
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 - **Node.js** (>=16.0.0) - [Download here](https://nodejs.org/)
 - **npm** (>=8.0.0) - Comes with Node.js
 - **Git** - [Download here](https://git-scm.com/)

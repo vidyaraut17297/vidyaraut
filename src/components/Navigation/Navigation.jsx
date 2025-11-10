@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navigation.module.css';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import logoImg from '/logo.png';
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -105,7 +106,7 @@ const Navigation = () => {
               onClick={e => scrollToSection(e, 'home')}
             >
               <img
-                src={import.meta.env.BASE_URL + 'logo.png'}
+                src={logoImg}
                 alt="Vidya Raut Logo"
                 className={styles.logo}
                 onError={e => {

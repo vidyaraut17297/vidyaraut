@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:vercel": "VITE_BASE_URL=/ npm run build",
+    "build:github": "VITE_BASE_URL=/vidyaraut/ npm run build",
     "preview": "vite preview",
     "lint": "eslint src --ext js,jsx",
     "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
