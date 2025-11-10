@@ -76,7 +76,6 @@ const AIChatbot = () => {
 
       // Check backend health
       const healthResponse = await fetch(`${API_BASE_URL}/health`, {
-        targetAddressSpace: 'private',
       });
       const backendStatus = healthResponse.ok ? 'online' : 'offline';
 
@@ -249,7 +248,6 @@ const AIChatbot = () => {
           message: inputValue.trim(),
           context: portfolioContext,
         }),
-        targetAddressSpace: 'public',
       });
 
       if (!response.ok) {
