@@ -1,178 +1,188 @@
-# Vidya Raut Portfolio
+# 🚀 Vidya Raut - Portfolio
 
-A modern, responsive portfolio website built with React, Vite, and Node.js backend.
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-22.x-339933?style=for-the-badge&logo=node.js)](https://nodejs.org/)
+[![OpenRouter](https://img.shields.io/badge/OpenRouter-AI-FF6B35?style=for-the-badge)](https://openrouter.ai/)
 
-## 🌐 Live Demo
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-FF6B35?style=for-the-badge&logo=firefox)](https://vidyaraut.vercel.app)
+[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-222222?style=for-the-badge&logo=github)](https://vidyaraut17297.github.io/vidyaraut/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/vidyaraut17)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/vidyaraut17297)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:vidyaraut17297@gmail.com)
 
-- **Vercel**: [https://vidyaraut.vercel.app](https://vidyaraut.vercel.app)
-- **GitHub Pages**: [https://vidyaraut17297.github.io/vidyaraut](https://vidyaraut17297.github.io/vidyaraut)
+> **M.Tech in Energy Technology | Market Analyst | Energy Storage & Power Markets**
+> *Physics (MSc) | B.Ed (Science & Maths) | 2+ Years Energy Sector Experience*
 
-## 📊 Project Status
+A modern, responsive portfolio website showcasing professional expertise in energy markets, battery R&D, and data analysis. Features an AI-powered chatbot and Apple-inspired design aesthetics.
 
-- ✅ **CSS Card Borders**: Red theme (#ef4444, #dc2626, #fca5a5) implemented
-- ✅ **Deployment**: Automated deployment to both Vercel and GitHub Pages
-- ✅ **AI Chat**: OpenRouter API integration with fallback models
-- ✅ **Responsive**: Mobile-first design with dark/light theme toggle
-- ✅ **Performance**: Optimized bundles with Vite build system
+## ✨ Features
 
-## 🚀 Features
+### 🎨 **Modern UI/UX**
+- **Apple-Inspired Design**: Clean, minimalist interface with smooth transitions
+- **Responsive Design**: Mobile-first approach supporting all device sizes
+- **Dark/Light Mode Ready**: CSS Variables for easy theme switching
+- **Accessibility First**: WCAG compliant with semantic HTML and ARIA attributes
 
-- **Responsive Design**: Works perfectly on all devices (mobile, tablet, desktop)
-- **Dark/Light Theme Toggle**: Automatic theme switching with system preference detection
-- **AI Chat Integration**: Interactive chatbot powered by OpenRouter API with multiple model fallbacks
-- **Smooth Animations**: CSS animations and transitions with GSAP integration
-- **SEO Optimized**: Meta tags, structured data, and performance optimizations
-- **Fast Performance**: Optimized Vite bundles with code splitting and lazy loading
-- **Progressive Web App**: Installable with offline capabilities
-- **Accessibility**: WCAG compliant with proper focus management and screen reader support
+### 🤖 **AI-Powered Chatbot**
+- **OpenRouter Integration**: Multiple AI models with intelligent fallbacks
+- **Real-time Responses**: Live AI conversations about expertise and general topics
+- **Smart Pattern Matching**: Intelligent responses when AI is unavailable
+- **System Status Monitoring**: Live backend and AI service status indicators
+- **Rate Limiting**: Built-in protection against abuse
+
+### 📊 **Portfolio Sections**
+- **🏠 About**: Professional summary and value proposition
+- **💼 Experience**: 2+ years in energy sector (Customized Energy Solutions)
+- **🎓 Education**: M.Tech (in progress), B.Ed, MSc Physics, BSc Physics
+- **🔬 Projects**: Battery R&D and physics research projects
+- **📜 Certifications**: MS-CIT, NCC Cadet, MHMEE-2020 Conference
+- **⚡ Skills**: Excel (Advanced), Battery Management, Laboratory Safety
+- **🌱 Energy Insights**: Market analysis and industry expertise
+- **🎯 Fun Crossword**: Interactive puzzle showcasing technical knowledge
+
+### ⚡ **Performance & Technical**
+- **CSS Card Borders**: Red theme (#ef4444, #dc2626, #fca5a5) implemented
+- **Deployment**: Automated deployment to both Vercel and GitHub Pages
+- **AI Chat**: OpenRouter API integration with fallback models
+- **Responsive**: Mobile-first design with dark/light theme toggle
+- **Performance**: Optimized bundles with Vite build system
+- **Lightning Fast**: Vite-powered build with code splitting and tree-shaking
+- **Optimized Bundle**: Efficient chunking and lazy loading
+- **SEO Ready**: Meta tags and structured data
+- **PWA Ready**: Service worker and manifest ready
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React**: 18.2.0 - Modern React with hooks and concurrent features
-- **Vite**: 7.1.7 - Fast build tool and development server
-- **CSS Modules**: Scoped styling with CSS variables
-- **Lucide React**: 0.553.0 - Beautiful icon library
-
-### Backend
-- **Node.js**: 22.x (LTS) - Runtime environment
-- **Express**: RESTful API server
-- **OpenRouter API**: AI model integration with multiple providers
-
-### Development Tools
-- **ESLint**: 9.39.1 - Code linting and quality assurance
-- **Prettier**: 3.6.2 - Code formatting
-- **Vitest**: Testing framework (optional)
-- **TypeScript**: Type definitions for React
-
-## 📦 Installation
-
-### Prerequisites
-- **Node.js**: 22.x (LTS) - [Download here](https://nodejs.org/)
-- **Git**: Latest version - [Download here](https://git-scm.com/)
-
-### Setup Steps
-
-1. **Clone the repository**:
-```bash
-git clone https://github.com/vidyaraut17297/vidyaraut.git
-cd vidyaraut
+### **Frontend**
+```json
+{
+  "React": "18.2.0",
+  "Vite": "7.1.7",
+  "Lucide React": "0.553.0",
+  "CSS Modules": "Latest",
+  "ESLint": "9.39.1",
+  "Prettier": "3.6.2"
+}
 ```
 
-2. **Install dependencies**:
-```bash
-# Install frontend dependencies
-npm install
-
-# Install backend dependencies
-cd backend && npm install && cd ..
+### **Backend**
+```json
+{
+  "Node.js": ">=22.0.0",
+  "Express.js": "4.18.2",
+  "OpenRouter AI": "Latest",
+  "CORS": "2.8.5",
+  "Express Rate Limit": "7.0.0",
+  "Redis": "4.6.7 (optional)"
+}
 ```
 
-3. **Create environment files**:
-```bash
-# .env (root) - Frontend environment
-VITE_BASE_URL=/
-
-# backend/.env - Backend environment
-OPENROUTER_API_KEY=your_api_key_here
-PORT=5001
-```
-
-4. **Get OpenRouter API Key**:
-   - Visit [OpenRouter.ai/keys](https://openrouter.ai/keys)
-   - Sign up for a free account
-   - Generate an API key
-   - Add it to `backend/.env`
-
-5. **Start development servers**:
-```bash
-# Start both frontend and backend together
-npm run dev:full
-
-# Or start individually:
-# Frontend only: npm run dev (port 5173)
-# Backend only: cd backend && npm run dev (port 5001)
-```
-
-## 🚀 Deployment
-
-### Automated Deployment (Recommended)
-
-The project deploys automatically via GitHub Actions when you push to the `main` branch:
-
-#### Vercel Deployment
-- **Status**: Automatic deployment on push to `main`
-- **URL**: [vidyaraut.vercel.app](https://vidyaraut.vercel.app)
-- **Configuration**: `vercel.json` handles automatic setup
-
-#### GitHub Pages Deployment
-- **Status**: Automatic deployment via GitHub Actions
-- **URL**: [vidyaraut17297.github.io/vidyaraut](https://vidyaraut17297.github.io/vidyaraut)
-- **Workflow**: `.github/workflows/deploy.yml`
-
-### Manual Deployment Options
-
-#### Using Deployment Script
-```bash
-# Deploy to Vercel only
-./deploy.sh vercel
-
-# Deploy to GitHub Pages only
-./deploy.sh github
-
-# Deploy to both platforms
-./deploy.sh both
-```
-
-#### Manual Vercel Deployment
-```bash
-# Build for Vercel
-npm run build:vercel
-
-# Then deploy via Vercel CLI or dashboard
-```
-
-#### Manual GitHub Pages Deployment
-```bash
-# Build for GitHub Pages
-npm run build:github
-
-# Push to main branch to trigger GitHub Actions
-git add .
-git commit -m "Deploy to GitHub Pages"
-git push origin main
-```
-
-### Environment Variables Setup
-
-#### For Vercel:
-1. Go to Vercel project dashboard
-2. Navigate to Settings → Environment Variables
-3. Add: `OPENROUTER_API_KEY`
-
-#### For GitHub Pages:
-1. Go to GitHub repository Settings → Secrets and variables → Actions
-2. Add: `OPENROUTER_API_KEY` as a repository secret
+### **Deployment**
+- **🚀 Vercel**: Recommended for full-stack deployment
+- **📄 GitHub Pages**: Static frontend deployment option
+- **🔄 CI/CD**: Automated builds and deployments
 
 ## 📁 Project Structure
 
 ```
 vidyaraut/
-├── src/                    # React frontend source
-│   ├── components/         # Reusable UI components
-│   ├── sections/          # Page sections
-│   ├── styles/            # CSS files and variables
-│   └── utils/             # Helper functions
-├── backend/               # Node.js backend
-│   ├── routes/           # API routes
-│   └── middleware/       # Custom middleware
-├── public/               # Static assets
-├── dist/                 # Build output (auto-generated)
-├── vercel.json          # Vercel deployment config
-└── .github/workflows/   # GitHub Actions
+├── 📁 src/                          # React frontend source
+│   ├── 📁 components/               # Reusable UI components
+│   │   ├── AIChatbot/              # AI-powered chat widget
+│   │   │   ├── AIChatbot.jsx       # Main chatbot component
+│   │   │   └── AIChatbot.module.css # Chatbot styles
+│   │   ├── Card.jsx                # Unified card component (red borders)
+│   │   ├── ErrorBoundary/          # Error boundary component
+│   │   ├── Footer/                 # Site footer
+│   │   ├── Hero/                   # Landing section
+│   │   ├── MarketVisualization/    # Market data visualization
+│   │   ├── Navigation/             # Responsive navbar
+│   │   ├── SkillIcons/             # Skill icon components
+│   │   └── ThemeToggle/            # Dark/light mode toggle
+│   ├── 📁 sections/                # Portfolio sections
+│   │   ├── About.jsx               # Professional summary
+│   │   ├── Certifications.jsx      # Professional certifications
+│   │   ├── Contact.jsx             # Contact information
+│   │   ├── Education.jsx           # Academic background
+│   │   ├── EnergyInsights.jsx      # Market analysis
+│   │   ├── Experience.jsx          # Work experience
+│   │   ├── FunCrossword.jsx        # Interactive puzzle
+│   │   ├── Projects.jsx            # Research projects
+│   │   └── Skills.jsx              # Technical skills
+│   ├── 📁 styles/                  # Global styles (red theme)
+│   │   ├── animations.css          # GSAP animations
+│   │   ├── global.css              # Reset & base styles
+│   │   ├── gradients.css           # Background gradients
+│   │   ├── mobile-friendly.css     # Mobile optimizations
+│   │   └── variables.css           # CSS custom properties
+│   ├── 📁 hooks/                   # Custom React hooks
+│   │   ├── useIntersectionObserver.js # Intersection observer
+│   │   └── useScrollAnimation.js   # Scroll animations
+│   ├── 📁 utils/                   # Utilities & constants
+│   │   ├── animations.js           # Animation utilities
+│   │   ├── chatApi.js              # Chat API client
+│   │   ├── constants.js            # App constants
+│   │   └── icons.js                # Icon definitions
+│   ├── 📁 data/                    # Static content data
+│   │   ├── certifications.js       # Certification data
+│   │   ├── education.js            # Education data
+│   │   ├── experience.js           # Experience data
+│   │   ├── projects.js             # Project data
+│   │   └── skills.js               # Skills data
+│   ├── App.jsx                     # Main app component
+│   └── main.jsx                    # React entry point
+├── 📁 backend/                     # Express.js API server
+│   ├── 📁 middleware/              # Custom middleware
+│   │   └── ratelimit.js            # Rate limiting middleware
+│   ├── 📁 routes/                  # API routes
+│   │   └── chat.js                 # Chat endpoints
+│   ├── server.js                   # Express server setup
+│   ├── .env                        # Backend environment vars
+│   └── package.json                # Backend dependencies
+├── 📁 public/                      # Static assets
+│   ├── _redirects                  # Netlify/Vercel redirects
+│   ├── .nojekyll                  # GitHub Pages config
+│   ├── 404.html                   # 404 error page
+│   ├── home picture.jpeg          # Hero image
+│   ├── logo.png                   # Site logo
+│   ├── Vidya Raut Resume.docx     # Resume document
+│   └── vite.svg                   # Vite logo
+├── 📁 api/                        # Vercel serverless functions
+│   ├── chat.js                    # Chat API endpoint
+│   └── health.js                  # Health check endpoint
+├── 📁 assets/                     # Build assets (auto-generated)
+├── 📁 .github/workflows/          # GitHub Actions
+│   └── deploy.yml                 # GitHub Pages deployment
+├── 📁 dist/                       # Build output (auto-generated)
+├── .env                           # Frontend environment vars
+├── .gitignore                     # Git ignore rules
+├── README.md                      # Project documentation
+├── deploy.sh                      # Deployment script
+├── eslint.config.js              # ESLint configuration
+├── package.json                   # Frontend dependencies
+├── package-lock.json              # Lock file
+├── vercel.json                    # Vercel deployment config
+├── vite.config.js                 # Vite configuration
+└── vite.svg                       # Vite logo
 ```
 
 ## 🎨 Customization
+
+### Card Border Colors (Red Theme)
+The project uses a red color scheme for all card borders:
+- **Primary Red**: `#ef4444` (light theme)
+- **Dark Red**: `#dc2626` (dark theme)
+- **Light Red**: `#fca5a5` (accents)
+
+To customize colors, update `src/styles/variables.css`:
+```css
+:root {
+  --color-primary: #ef4444;      /* Change main red */
+  --color-primary-dark: #dc2626; /* Change dark red */
+  --color-primary-light: #fca5a5; /* Change light red */
+}
+```
 
 ### Base URL Configuration
 Set `VITE_BASE_URL` in `.env`:
@@ -180,22 +190,33 @@ Set `VITE_BASE_URL` in `.env`:
 - Vercel: `VITE_BASE_URL=/`
 - GitHub Pages: `VITE_BASE_URL=/vidyaraut/`
 
-### Theme Colors
-Update `src/styles/variables.css` to customize colors.
-
 ### Content
 Edit content in `src/utils/constants.js` and section components.
 
 ## 🔧 Development Scripts
 
 ```bash
-npm run dev          # Start frontend dev server
-npm run dev:full     # Start both frontend and backend
-npm run build        # Production build
-npm run build:vercel # Build for Vercel
-npm run build:github # Build for GitHub Pages
-npm run preview      # Preview production build
-npm run lint         # Run ESLint
+# Development
+npm run dev              # Start frontend dev server (port 5173)
+npm run dev:full         # Start both frontend and backend servers
+
+# Building
+npm run build            # Production build for Vercel
+npm run build:vercel     # Build for Vercel deployment
+npm run build:github     # Build for GitHub Pages deployment
+
+# Quality Assurance
+npm run lint             # Run ESLint code quality checks
+npm run format           # Format code with Prettier
+
+# Preview & Deployment
+npm run preview          # Preview production build locally
+npm run start:full       # Start production servers (frontend + backend)
+
+# Deployment Scripts
+./deploy.sh vercel       # Deploy to Vercel
+./deploy.sh github       # Deploy to GitHub Pages
+./deploy.sh both         # Deploy to both platforms
 ```
 
 ## 🌐 Live Demo
