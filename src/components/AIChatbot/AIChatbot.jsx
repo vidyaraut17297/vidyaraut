@@ -24,7 +24,13 @@ const AIChatbot = () => {
   const inputRef = useRef(null);
 
   // Define API base URL - use environment variable or fallback to Vercel URL for production
-  const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://vidyaraut.vercel.app';
+  const API_BASE_URL = import.meta.env.VITE_API_URL ||
+                       (typeof window !== 'undefined' ? window.location.origin : 'https://vidyaraut.vercel.app');
+
+  // Debug: Log the API URL being used
+  console.log('Frontend API Base URL:', API_BASE_URL);
+  console.log('Environment VITE_API_URL:', import.meta.env.VITE_API_URL);
+  console.log('Window location:', typeof window !== 'undefined' ? window.location.origin : 'undefined');
 
   // Clear chat history on hard refresh/page reload
   useEffect(() => {
