@@ -1,24 +1,33 @@
-name: Deploy to GitHub Pages
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
-    branches: [ main ]
-  workflow_dispatch: # Allow manual trigger
+    branches: ["main"]
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -27,7 +36,7 @@ jobs:
           cache: 'npm'
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Install dependencies
         run: npm ci
@@ -39,7 +48,6 @@ jobs:
           OPENROUTER_SITE_URL: https://vidyaraut17297.github.io/vidyaraut
           OPENROUTER_APP_TITLE: Vidya Raut Portfolio Assistant
           NODE_ENV: production
-          # Force environment variables to be available during build
           VITE_OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
       - name: Upload artifact
@@ -47,6 +55,7 @@ jobs:
         with:
           path: ./dist
 
+  # Deployment job
   deploy:
     environment:
       name: github-pages
