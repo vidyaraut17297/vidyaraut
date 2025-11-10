@@ -23,8 +23,8 @@ const AIChatbot = () => {
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
-  // Define API base URL - use environment variable or fallback to localhost for development
-  const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+  // Define API base URL - use environment variable or fallback to Vercel URL for production
+  const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://vidyaraut.vercel.app';
 
   // Clear chat history on hard refresh/page reload
   useEffect(() => {
