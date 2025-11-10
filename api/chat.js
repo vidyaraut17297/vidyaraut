@@ -76,9 +76,19 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { message, context } = req.body;
+    // Ensure body is parsed
+    let body;
+    if (typeof req.body === 'string') {
+      body = JSON.parse(req.body);
+    } else {
+      body = req.body;
+    }
 
-    if (!message) {
+    const { message, context } = body || {};
+
+    // Validate message
+    const trimmedMessage = message?.toString().trim();
+    if (!trimmedMessage) {
       return res.status(400).json({ error: 'Message is required' });
     }
 
@@ -89,7 +99,6 @@ export default async function handler(req, res) {
     const modelsToTry = [
       "minimax/minimax-m2:free",                  // MiniMax (primary - tested working)
       "openrouter/polaris-alpha",                 // Polaris Alpha (user's preferred fallback)
-      "qwen/qwen3-coder-480b-a35b-instruct:free" // Qwen3 Coder (second fallback)
     ];
 
     let response;
