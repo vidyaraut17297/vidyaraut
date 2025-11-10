@@ -20,6 +20,12 @@
   flex-direction: column;
 }
 
+/* Ensure ProjectCard has visible border in dark mode */
+:global(.dark-theme) .project-card {
+  background: #1c1c1e; /* Dark grey background */
+  border: 2px solid #404040; /* Grey border */
+}
+
 .project-card::before {
   content: '';
   position: absolute;
@@ -41,6 +47,7 @@
 .project-card.hovered {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-primary);
 }
 
 .project-header {

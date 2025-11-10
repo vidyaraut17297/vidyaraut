@@ -18,8 +18,8 @@
 
 /* Dark theme card - black background with white text and grey border */
 .dark-theme .card {
-  background: #000000; /* Black background */
-  border-color: var(--color-border); /* Grey border */
+  background: #1c1c1e; /* Dark grey background */
+  border: 2px solid #404040; /* Grey border */
   color: #ffffff; /* White text */
 }
 
@@ -41,7 +41,7 @@
 .card--hover:hover {
   transform: translateY(-8px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-border);
+  border-color: var(--color-primary);
 }
 
 .card--outlined {
@@ -63,6 +63,7 @@
 .card--elevated.card--hover:hover {
   box-shadow: var(--shadow-xl);
   transform: translateY(-6px) scale(1.01);
+  border-color: var(--color-primary);
 }
 
 .card--flat {
@@ -76,6 +77,7 @@
   background: var(--color-white);
   box-shadow: var(--shadow-base);
   transform: translateY(-2px);
+  border-color: var(--color-primary);
 }
 
 /* Special styling for specific card types - Apple.com inspired */

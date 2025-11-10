@@ -36,6 +36,21 @@
   --color-accent: #4cd964; /* Apple light green */
 }
 
+/* Override background for all sections in dark theme */
+:root.dark-theme section,
+:root.dark-theme #home,
+:root.dark-theme #about,
+:root.dark-theme #skills,
+:root.dark-theme #projects,
+:root.dark-theme #certifications,
+:root.dark-theme #experience,
+:root.dark-theme #education,
+:root.dark-theme #contact,
+:root.dark-theme #fun-crossword,
+:root.dark-theme #energy-insights {
+  background: #000000 !important;
+}
+
 /* Global body styles for themes */
 body {
   background-color: var(--color-background);

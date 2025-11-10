@@ -107,7 +107,7 @@
 .exp-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-border);
+  border-color: var(--color-primary);
 }
 
 /* Experience Header */
@@ -287,7 +287,7 @@
 .edu-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-border);
+  border-color: var(--color-primary);
 }
 
 .edu-icon {
@@ -376,7 +376,7 @@
 .skills-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-border);
+  border-color: var(--color-primary);
 }
 
 .skills-card h3 {
@@ -447,7 +447,7 @@
 .projects-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-border);
+  border-color: var(--color-primary);
 }
 
 .projects-card h3 {
@@ -534,7 +534,7 @@
 .cert-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-border);
+  border-color: var(--color-primary);
 }
 
 .cert-icon {
@@ -606,7 +606,7 @@
 .about-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-border);
+  border-color: var(--color-primary);
 }
 
 .about-card blockquote {
@@ -663,7 +663,7 @@
 .contact-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-border);
+  border-color: var(--color-primary);
 }
 
 .contact-card h3 {
@@ -771,7 +771,7 @@
 .energy-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-border);
+  border-color: var(--color-primary);
 }
 
 /* Alt background for alternating sections */
