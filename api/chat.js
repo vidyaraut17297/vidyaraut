@@ -95,12 +95,28 @@ export default async function handler(req, res) {
       }
     }
 
+    console.log('Final body object:', JSON.stringify(body));
+    console.log('Body keys:', Object.keys(body || {}));
+
     const { message, context } = body || {};
+
+    console.log('Extracted message:', message);
+    console.log('Extracted context:', context);
 
     // Validate message
     const trimmedMessage = message?.toString().trim();
+    console.log('Trimmed message:', trimmedMessage);
+
     if (!trimmedMessage) {
-      return res.status(400).json({ error: 'Message is required' });
+      return res.status(400).json({
+        error: 'Message is required',
+        debug: {
+          bodyType: typeof body,
+          bodyKeys: Object.keys(body || {}),
+          receivedMessage: message,
+          bodyString: JSON.stringify(body)
+        }
+      });
     }
 
     // Prepare the context for the AI
