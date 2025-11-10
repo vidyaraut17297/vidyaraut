@@ -84,17 +84,28 @@ const ContactSection = () => {
               method="POST"
               data-netlify="true"
             >
-              <input type="text" name="name" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="name"
+                id="contact-name"
+                placeholder="Your Name"
+                autoComplete="name"
+                required
+              />
               <input
                 type="email"
                 name="email"
+                id="contact-email"
                 placeholder="Your Email"
+                autoComplete="email"
                 required
               />
               <textarea
                 name="message"
+                id="contact-message"
                 placeholder="Your Message"
                 rows="4"
+                autoComplete="off"
                 required
               ></textarea>
               <button type="submit" className="btn">

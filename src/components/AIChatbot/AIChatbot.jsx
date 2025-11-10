@@ -75,7 +75,9 @@ const AIChatbot = () => {
       }));
 
       // Check backend health
-      const healthResponse = await fetch(`${API_BASE_URL}/health`);
+      const healthResponse = await fetch(`${API_BASE_URL}/health`, {
+        targetAddressSpace: 'private',
+      });
       const backendStatus = healthResponse.ok ? 'online' : 'offline';
 
       // Check AI status by making a test request
@@ -83,6 +85,7 @@ const AIChatbot = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: 'test', context: {} }),
+        targetAddressSpace: 'private',
       });
 
       let aiStatus = 'offline';
@@ -247,6 +250,7 @@ const AIChatbot = () => {
           message: inputValue.trim(),
           context: portfolioContext,
         }),
+        targetAddressSpace: 'private',
       });
 
       if (!response.ok) {
