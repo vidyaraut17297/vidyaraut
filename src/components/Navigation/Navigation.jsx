@@ -105,7 +105,7 @@ const Navigation = () => {
               onClick={e => scrollToSection(e, 'home')}
             >
               <img
-                src="/logo.png"
+                src={import.meta.env.BASE_URL + 'logo.png'}
                 alt="Vidya Raut Logo"
                 className={styles.logo}
                 onError={e => {

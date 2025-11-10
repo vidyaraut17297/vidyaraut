@@ -11,7 +11,7 @@ const Hero = () => {
       <div className={`${styles.heroContent} container`}>
         <div className={styles.heroImage}>
           <img
-            src="/home picture.jpeg"
+            src={import.meta.env.BASE_URL + 'home picture.jpeg'}
             alt="Vidya Raut portrait"
             loading="eager"
             onError={e => {
