@@ -2,71 +2,157 @@
 
 A modern, responsive portfolio website built with React, Vite, and Node.js backend.
 
+## 🌐 Live Demo
+
+- **Vercel**: [https://vidyaraut.vercel.app](https://vidyaraut.vercel.app)
+- **GitHub Pages**: [https://vidyaraut17297.github.io/vidyaraut](https://vidyaraut17297.github.io/vidyaraut)
+
+## 📊 Project Status
+
+- ✅ **CSS Card Borders**: Red theme (#ef4444, #dc2626, #fca5a5) implemented
+- ✅ **Deployment**: Automated deployment to both Vercel and GitHub Pages
+- ✅ **AI Chat**: OpenRouter API integration with fallback models
+- ✅ **Responsive**: Mobile-first design with dark/light theme toggle
+- ✅ **Performance**: Optimized bundles with Vite build system
+
 ## 🚀 Features
 
-- **Responsive Design**: Works perfectly on all devices
-- **Dark/Light Theme Toggle**: Automatic theme switching
-- **AI Chat Integration**: Interactive chatbot powered by OpenRouter API
-- **Smooth Animations**: CSS animations and transitions
-- **SEO Optimized**: Meta tags and structured data
-- **Fast Performance**: Optimized bundles and lazy loading
+- **Responsive Design**: Works perfectly on all devices (mobile, tablet, desktop)
+- **Dark/Light Theme Toggle**: Automatic theme switching with system preference detection
+- **AI Chat Integration**: Interactive chatbot powered by OpenRouter API with multiple model fallbacks
+- **Smooth Animations**: CSS animations and transitions with GSAP integration
+- **SEO Optimized**: Meta tags, structured data, and performance optimizations
+- **Fast Performance**: Optimized Vite bundles with code splitting and lazy loading
+- **Progressive Web App**: Installable with offline capabilities
+- **Accessibility**: WCAG compliant with proper focus management and screen reader support
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React 18, Vite, CSS Modules
-- **Backend**: Node.js, Express, Redis (optional)
-- **Deployment**: Vercel, GitHub Pages
-- **AI**: OpenRouter API integration
+### Frontend
+- **React**: 18.2.0 - Modern React with hooks and concurrent features
+- **Vite**: 7.1.7 - Fast build tool and development server
+- **CSS Modules**: Scoped styling with CSS variables
+- **Lucide React**: 0.553.0 - Beautiful icon library
+
+### Backend
+- **Node.js**: 22.x (LTS) - Runtime environment
+- **Express**: RESTful API server
+- **OpenRouter API**: AI model integration with multiple providers
+
+### Development Tools
+- **ESLint**: 9.39.1 - Code linting and quality assurance
+- **Prettier**: 3.6.2 - Code formatting
+- **Vitest**: Testing framework (optional)
+- **TypeScript**: Type definitions for React
 
 ## 📦 Installation
 
-1. Clone the repository:
+### Prerequisites
+- **Node.js**: 22.x (LTS) - [Download here](https://nodejs.org/)
+- **Git**: Latest version - [Download here](https://git-scm.com/)
+
+### Setup Steps
+
+1. **Clone the repository**:
 ```bash
-git clone https://github.com/yourusername/vidyaraut.git
+git clone https://github.com/vidyaraut17297/vidyaraut.git
 cd vidyaraut
 ```
 
-2. Install dependencies:
+2. **Install dependencies**:
 ```bash
+# Install frontend dependencies
 npm install
+
+# Install backend dependencies
 cd backend && npm install && cd ..
 ```
 
-3. Create environment files:
+3. **Create environment files**:
 ```bash
-# .env (root)
+# .env (root) - Frontend environment
 VITE_BASE_URL=/
 
-# backend/.env
+# backend/.env - Backend environment
 OPENROUTER_API_KEY=your_api_key_here
 PORT=5001
 ```
 
-4. Start development servers:
+4. **Get OpenRouter API Key**:
+   - Visit [OpenRouter.ai/keys](https://openrouter.ai/keys)
+   - Sign up for a free account
+   - Generate an API key
+   - Add it to `backend/.env`
+
+5. **Start development servers**:
 ```bash
-npm run dev:full  # Runs both frontend (port 3000) and backend (port 5001)
+# Start both frontend and backend together
+npm run dev:full
+
+# Or start individually:
+# Frontend only: npm run dev (port 5173)
+# Backend only: cd backend && npm run dev (port 5001)
 ```
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### Automated Deployment (Recommended)
+
+The project deploys automatically via GitHub Actions when you push to the `main` branch:
+
+#### Vercel Deployment
+- **Status**: Automatic deployment on push to `main`
+- **URL**: [vidyaraut.vercel.app](https://vidyaraut.vercel.app)
+- **Configuration**: `vercel.json` handles automatic setup
+
+#### GitHub Pages Deployment
+- **Status**: Automatic deployment via GitHub Actions
+- **URL**: [vidyaraut17297.github.io/vidyaraut](https://vidyaraut17297.github.io/vidyaraut)
+- **Workflow**: `.github/workflows/deploy.yml`
+
+### Manual Deployment Options
+
+#### Using Deployment Script
 ```bash
+# Deploy to Vercel only
+./deploy.sh vercel
+
+# Deploy to GitHub Pages only
+./deploy.sh github
+
+# Deploy to both platforms
+./deploy.sh both
+```
+
+#### Manual Vercel Deployment
+```bash
+# Build for Vercel
 npm run build:vercel
-# Deploy to Vercel - connects automatically via vercel.json
+
+# Then deploy via Vercel CLI or dashboard
 ```
 
-### GitHub Pages
+#### Manual GitHub Pages Deployment
 ```bash
+# Build for GitHub Pages
 npm run build:github
-# Push to main branch - GitHub Actions deploys automatically
+
+# Push to main branch to trigger GitHub Actions
+git add .
+git commit -m "Deploy to GitHub Pages"
+git push origin main
 ```
 
-### Manual Deployment Script
-```bash
-./deploy.sh vercel    # Build for Vercel
-./deploy.sh github    # Build for GitHub Pages
-./deploy.sh both      # Build for both platforms
-```
+### Environment Variables Setup
+
+#### For Vercel:
+1. Go to Vercel project dashboard
+2. Navigate to Settings → Environment Variables
+3. Add: `OPENROUTER_API_KEY`
+
+#### For GitHub Pages:
+1. Go to GitHub repository Settings → Secrets and variables → Actions
+2. Add: `OPENROUTER_API_KEY` as a repository secret
 
 ## 📁 Project Structure
 
