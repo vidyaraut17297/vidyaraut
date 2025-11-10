@@ -32,7 +32,8 @@ export default defineConfig(({ mode }) => {
             }
           }
         }
-      }
+      },
+      copyPublicDir: true
     },
     css: {
       modules: {
