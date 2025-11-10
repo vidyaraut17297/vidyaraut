@@ -76,29 +76,58 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Simple body parsing for Vercel
-    let body = req.body;
+    // Debug logging
+    console.log('Request body type:', typeof req.body);
+    console.log('Request body:', req.body);
 
-    // If body is not parsed, try to parse it
-    if (!body || typeof body !== 'object') {
-      // For Vercel, sometimes body comes as a string
-      if (typeof req.body === 'string') {
-        try {
-          body = JSON.parse(req.body);
-        } catch (e) {
-          return res.status(400).json({ error: 'Invalid JSON body' });
+    // Handle body parsing
+    let body;
+    if (req.body && typeof req.body === 'object') {
+      body = req.body;
+    } else if (typeof req.body === 'string') {
+      try {
+        body = JSON.parse(req.body);
+      } catch (e) {
+        console.log('JSON parse error:', e);
+        return res.status(400).json({ error: 'Invalid JSON body' });
+      }
+    } else {
+      // Try to read raw body for Vercel
+      try {
+        const chunks = [];
+        for await (const chunk of req) {
+          chunks.push(chunk);
         }
-      } else {
-        return res.status(400).json({ error: 'Invalid request body' });
+        const rawBody = Buffer.concat(chunks).toString();
+        console.log('Raw body:', rawBody);
+        body = JSON.parse(rawBody);
+      } catch (e) {
+        console.log('Raw body parse error:', e);
+        return res.status(400).json({ error: 'Unable to parse request body' });
       }
     }
 
-    const { message, context } = body;
+    console.log('Parsed body:', body);
+
+    const { message, context } = body || {};
+
+    console.log('Message:', message);
+    console.log('Message type:', typeof message);
 
     // Validate message
     const trimmedMessage = message?.toString().trim();
+    console.log('Trimmed message:', trimmedMessage);
+
     if (!trimmedMessage) {
-      return res.status(400).json({ error: 'Message is required' });
+      return res.status(400).json({
+        error: 'Message is required',
+        debug: {
+          bodyType: typeof body,
+          hasMessage: !!message,
+          messageValue: message,
+          trimmedLength: trimmedMessage?.length || 0
+        }
+      });
     }
 
     // Prepare the context for the AI
