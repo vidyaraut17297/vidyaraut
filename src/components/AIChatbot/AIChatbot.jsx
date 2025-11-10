@@ -75,7 +75,7 @@ const AIChatbot = () => {
       }));
 
       // Check backend health
-      const healthResponse = await fetch(`${API_BASE_URL}/health`);
+      const healthResponse = await fetch(`${API_BASE_URL}/api/health`);
       const backendStatus = healthResponse.ok ? 'online' : 'offline';
 
       // Check AI status by making a test request
