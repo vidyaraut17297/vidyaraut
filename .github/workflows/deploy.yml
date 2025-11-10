@@ -54,10 +54,10 @@ jobs:
         run: |
           echo "Verifying build output..."
           ls -la dist/
-          echo "Checking if base path is correct in index.html:"
-          grep -o 'href="[^"]*"' dist/index.html | head -5
-          echo "Checking for _redirects and 404.html in public folder:"
-          ls -la dist/ | grep -E "(404|_redirects)" || echo "No redirect files found in dist"
+          echo "Checking asset paths in index.html:"
+          grep -o '/vidyaraut/[^"]*' dist/index.html || echo "No vidyaraut paths found"
+          echo "Checking for static assets:"
+          ls -la dist/ | grep -E "\.(png|jpeg|jpg|svg|ico)" || echo "No image assets found"
           echo "Build verification completed."
 
       - name: Setup Pages
