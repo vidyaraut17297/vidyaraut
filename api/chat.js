@@ -94,7 +94,7 @@ export default async function handler(req, res) {
 
     let response;
     let lastError;
-    
+
     // Try each model in sequence until one works
     for (const model of modelsToTry) {
       try {
